@@ -1,0 +1,10 @@
+/* Declic's seven-second signature, applied to the inner Z so the original
+   header float and shine remain on their own animation layer. */
+.global-header :is(.header-zed-mark,.zedesign-brand-mark){position:relative;isolation:isolate;overflow:visible}
+.global-header :is(.header-zed-mark,.zedesign-brand-mark)>svg{transform-origin:50% 70%;border-radius:25%;animation:zedDeclicSignature 7s ease-in-out infinite}
+.global-header :is(.header-zed-mark,.zedesign-brand-mark)::before{content:"";position:absolute;inset:-5px;border:2px solid #45cbff80;border-radius:32%;pointer-events:none;animation:zedDeclicHalo 7s ease-in-out infinite}
+.global-header .zed-declic-glint{position:absolute;inset:5px;border-radius:25%;background:linear-gradient(110deg,transparent 15%,#64dcff1a 35%,#ffffffbf 50%,transparent 70%);pointer-events:none;animation:zedDeclicGlint 7s ease-in-out infinite}
+@keyframes zedDeclicSignature{0%,8%,38%,100%{transform:rotate(0) scale(1);box-shadow:0 4px 14px #159cff20}16%{transform:rotate(-9deg) scale(1.1);box-shadow:0 0 22px #40ceff80}24%{transform:rotate(7deg) scale(1.06)}32%{transform:rotate(-3deg) scale(1.03)}}
+@keyframes zedDeclicGlint{0%,10%,42%,100%{opacity:0;clip-path:inset(0 100% 0 0)}18%{opacity:1;clip-path:inset(0 0 0 0)}30%{opacity:0;clip-path:inset(0 0 0 100%)}}
+@keyframes zedDeclicHalo{0%,10%,42%,100%{opacity:0;transform:scale(.98)}18%{opacity:.8;transform:scale(1.04)}36%{opacity:0;transform:scale(1.28)}}
+@media(prefers-reduced-motion:reduce){.global-header :is(.header-zed-mark,.zedesign-brand-mark)>svg,.global-header :is(.header-zed-mark,.zedesign-brand-mark)::before,.global-header .zed-declic-glint{animation:none}.global-header :is(.header-zed-mark,.zedesign-brand-mark)::before,.global-header .zed-declic-glint{display:none}}
