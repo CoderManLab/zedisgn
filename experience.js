@@ -11,7 +11,7 @@
  const originalWork=work.innerHTML;
  const layouts={
   mobile:'<span>Un parcours, trois écrans</span><div class="universe-app-flow"><div><i></i><b>01</b><strong>Découvrir</strong><em></em><em></em><small>Explorer</small></div><div><i></i><b>02</b><strong>Choisir</strong><em></em><em></em><small>Personnaliser</small></div><div><i></i><b>03</b><strong>Créer</strong><em></em><em></em><small>Confirmer</small></div></div>',
-  identity:'<span>Votre planche de marque</span><div class="universe-brand-board"><div class="universe-monogram">Z<small>LA SIGNATURE</small></div><div class="universe-brand-kit"><div class="universe-palette"><i></i><i></i><i></i></div><strong>Aa</strong><small>Typographie · Couleurs · Supports</small></div></div>'
+  identity:'<span>Votre planche de marque</span><div class="universe-brand-board"><div class="universe-monogram"><span class="universe-signature">Designed By<br>Zed©</span></div><div class="universe-brand-kit"><div class="universe-palette"><i></i><i></i><i></i></div><strong>Aa</strong><small>Typographie · Couleurs · Supports</small></div></div>'
  };
  const buttons=[...document.querySelectorAll('[data-demo-choice]')];
  let timer;
