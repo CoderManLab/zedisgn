@@ -635,3 +635,11 @@ body{padding-top:78px}
 
 /* Keep the complete active frame inside every cell, above its animated fill. */
 .trust-motion .trust-runner{z-index:4;box-sizing:border-box}
+
+/* Contextual SVG replaces each active pulse dot. */
+.trust-motion>span::before{content:none}
+.trust-motion>span>.trust-icon{position:absolute;left:50%;bottom:12px;width:22px;height:22px;fill:none;stroke:#72e4ff;stroke-width:1.65;stroke-linecap:round;stroke-linejoin:round;opacity:0;transform:translate(-50%,8px) scale(.2);transition:opacity .45s ease,transform .45s ease;pointer-events:none}
+.trust-motion>span.is-trust-active>.trust-icon{opacity:1;transform:translate(-50%,0) scale(1);animation:trustIconPulse 1.6s ease-in-out infinite}
+@keyframes trustIconPulse{0%,100%{filter:drop-shadow(0 0 3px #62dcff88)}50%{filter:drop-shadow(0 0 9px #62dcffdd)}}
+@media(max-width:660px){.trust-motion>span{padding-bottom:2.5rem}.trust-motion>span>.trust-icon{bottom:10px;width:24px;height:24px}}
+@media(prefers-reduced-motion:reduce){.trust-motion>span>.trust-icon{transition:none!important;animation:none!important}}
