@@ -1,0 +1,19 @@
+
+/* ZEDESIGN: staggered entrances and restrained interactive light. */
+.motion-card{position:relative;isolation:isolate;overflow:hidden;transition:border-color .35s,box-shadow .35s}
+.motion-card:after{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(circle at var(--light-x,50%) var(--light-y,0%),rgba(83,213,255,.16),transparent 60%);opacity:0;transition:opacity .4s}
+.motion-ready .motion-card:not(.motion-visible){opacity:0;transform:translateY(24px) scale(.975)}
+.motion-card.motion-visible{animation:zedCardEnter .85s cubic-bezier(.16,1,.3,1) var(--reveal-delay,0ms) both}
+@keyframes zedCardEnter{from{opacity:0;transform:translateY(24px) scale(.975)}to{opacity:1;transform:none}}
+@media(hover:hover) and (pointer:fine){.motion-card:hover{border-color:rgba(90,219,255,.5);box-shadow:0 14px 40px #0004,0 0 28px #25baff12}.motion-card:hover:after{opacity:1}}
+.motion-card:focus-within{border-color:#54d9ff}
+.motion-card h3{position:relative}
+.motion-card h3:after{content:"";display:block;width:24px;height:2px;margin-top:9px;background:linear-gradient(90deg,#54d9ff,#118fff);transform-origin:left;transition:transform .4s}
+.motion-card:hover h3:after{transform:scaleX(1.8)}
+.top .brand{animation:zedBrandEnter .75s cubic-bezier(.16,1,.3,1) both}
+@keyframes zedBrandEnter{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:none}}
+.partner-section .service-card{min-height:260px}
+.partner-note{color:var(--muted);font-size:.9rem;margin-top:1rem}
+html{scroll-padding-top:100px}
+@media(max-width:660px){.partner-section .service-card{min-height:0}.nav{max-height:calc(100dvh - 90px);overflow-y:auto}html{scroll-padding-top:90px}}
+@media(prefers-reduced-motion:reduce){.motion-ready .motion-card:not(.motion-visible){opacity:1;transform:none}.motion-card.motion-visible,.top .brand{animation:none}.motion-card,.motion-card:after,.motion-card h3:after{transition:none}}
