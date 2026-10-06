@@ -5,7 +5,9 @@
  const reduced=matchMedia('(prefers-reduced-motion: reduce)');
  const titles=[...document.querySelectorAll('main h1,main h2,main .motion-card h3')];
  titles.forEach(el=>el.classList.add('zed-scroll-rule'));
- const rules=[...titles,...document.querySelectorAll('.scene-rule')];
+ const steps=[...document.querySelectorAll('.process-grid > article')];
+ steps.forEach(el=>el.classList.add('zed-step-rule'));
+ const rules=[...titles,...steps,...document.querySelectorAll('.scene-rule')];
  const visible=new Set();
  if(!('IntersectionObserver' in window)||reduced.matches)return;
  document.documentElement.classList.add('zed-rules-ready');

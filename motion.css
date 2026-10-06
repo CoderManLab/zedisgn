@@ -37,3 +37,19 @@ html body .scene-rule.zed-scroll-rule{background-size:220% 100%;background-posit
 @media(prefers-reduced-motion:reduce){
  html.zed-rules-ready body .zed-scroll-rule::after{transform:none;transition:none}
 }
+
+/* One gradient connector per numbered step, including stacked mobile cards. */
+html body .process-grid::before{content:none}
+html body .process-grid>.zed-step-rule::before{
+ content:"";position:absolute;left:22px;right:22px;top:22px;height:2px;pointer-events:none;
+ background:linear-gradient(90deg,#65e4ff,#168fff 35%,#b8f5ff 58%,transparent 95%);
+ background-size:220% 100%;background-position:var(--rule-light,0%) 50%;
+ box-shadow:0 0 12px #41ceff30;transform-origin:left;transform:scaleX(1);
+ transition:transform .85s cubic-bezier(.16,1,.3,1);
+}
+html.zed-rules-ready body .process-grid>.zed-step-rule::before{transform:scaleX(.14)}
+html.zed-rules-ready body .process-grid>.zed-step-rule.zed-rule-visible::before{transform:scaleX(1)}
+html body .process-grid>.zed-step-rule>span{position:relative;z-index:1}
+@media(prefers-reduced-motion:reduce){
+ html.zed-rules-ready body .process-grid>.zed-step-rule::before{transform:none;transition:none}
+}
