@@ -17,3 +17,22 @@ main{min-width:0}.wrap,.hero,.section{overflow-wrap:break-word}.card h3,.hero h1
 @media(max-width:1000px){.global-menu{display:block}.site-navigation{display:none;position:absolute;top:calc(100% + 8px);left:14px;right:14px;background:rgba(5,16,29,.98);border:1px solid var(--line);border-radius:18px;padding:14px;box-shadow:0 20px 50px #0006;max-height:calc(100dvh - 110px);overflow:auto;gap:4px}.site-navigation.is-open{display:flex;flex-direction:column;align-items:stretch}.site-navigation a{padding:12px}.site-navigation .navigation-cta{margin-top:5px}.global-header{gap:12px}.footer-columns{grid-template-columns:1.4fr 1fr;gap:24px}.service-directory{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:660px){.global-header{padding-inline:14px}.wrap>.hero{padding-top:28px}.wrap>.hero h1{font-size:clamp(2.3rem,10vw,3.8rem);line-height:1.02}.section{padding-block:20px}.section h2{font-size:clamp(1.8rem,7.5vw,2.4rem)}.portfolio-grid,.service-directory,.contact-layout{grid-template-columns:minmax(0,1fr)}.portfolio-grid .project-media{height:210px}.portfolio-grid .project-card-content{padding:20px}.portfolio-filters{gap:8px}.portfolio-filters button{font-size:.9rem;padding:9px 13px}.service-directory .card{min-height:0}.footer-columns{grid-template-columns:1fr 1fr;gap:22px}.footer-columns>div:first-child{grid-column:1/-1}.global-footer{padding-top:28px;padding-bottom:88px}.footer-note{flex-direction:column;font-size:.8rem}.showcase-caption{font-size:.72rem}.breadcrumbs{font-size:.82rem;margin-top:18px}.contact-aside{padding:20px}.faq-list details{padding:16px}.brief-preview{padding:16px}.brief-form>.btn{width:100%}.related-work{padding:20px}.hero-actions .btn{max-width:100%}.site-header .zedesign-brand-name{font-size:1.05rem}.site-header .zedesign-brand-mark{width:44px;height:44px;flex-basis:44px}}
 @media(prefers-reduced-motion:reduce){.site-navigation>a{transition:none}.portfolio-grid .ui-shot{transform:none}}
+/* One mobile frame across direct navigation and restored history entries. */
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%;width:100%;max-width:100%;overflow-x:hidden}
+body{width:100%;max-width:100%;min-width:0;overflow-x:hidden}
+@media(max-width:1000px){
+ .global-header{display:grid!important;grid-template-columns:minmax(0,1fr) max-content;align-items:center;box-sizing:border-box;min-width:0!important;max-width:100%!important;width:100%!important;padding-inline:14px!important;gap:12px!important}
+ .global-header>.brand{min-width:0!important;max-width:100%;width:max-content;justify-self:start}
+ .global-menu{position:relative;justify-self:end;min-width:0;max-width:100%;margin:0;flex-shrink:0;font-size:16px;line-height:1.4;padding:10px 14px}
+ .site-navigation{grid-column:1/-1;box-sizing:border-box;max-width:calc(100% - 28px)}
+ .float-stack{left:auto!important;right:14px!important;width:48px;max-width:48px;justify-items:center}
+ .float-stack .wa-float{position:relative!important;left:auto!important;right:auto!important;width:48px!important;height:48px!important;margin:0!important;padding:0!important;justify-content:center}
+ .float-stack .wa-float span{display:none}
+ .back-float{left:auto!important;right:14px!important;width:48px!important;height:48px!important}
+ .chat-float{left:14px!important;right:auto!important;width:48px!important;height:48px!important;padding:0!important;justify-content:center}
+ .chat-float span{display:none}
+ .hero,.section,.cta-band,.trust-strip,.wrap{max-width:calc(100% - 28px);min-width:0}
+ .wrap>.hero,.wrap>.section{max-width:100%}
+ .hero-actions{min-width:0;max-width:100%}
+ .hero-actions .btn{min-width:0;white-space:normal;overflow-wrap:anywhere}
+}

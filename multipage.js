@@ -10,6 +10,16 @@
   document.addEventListener('keydown', e => { if (e.key === 'Escape') { const open = nav?.classList.contains('is-open'); close(); if(open) button?.focus(); } });
   document.addEventListener('click', e => { if (!nav?.contains(e.target) && !button?.contains(e.target)) close(); });
   window.addEventListener('scroll', close, {passive:true});
+  // BFCache restores focus, menu state and horizontal scroll as well as content.
+  // Retain the user's vertical position and normal browser pinch zoom.
+  const restoreFrame = () => {
+    close();
+    document.documentElement.scrollLeft = 0;
+    document.body.scrollLeft = 0;
+    if(document.activeElement === button) button.blur();
+  };
+  window.addEventListener('pageshow', restoreFrame);
+  window.addEventListener('orientationchange', restoreFrame);
 
   const projects = [...document.querySelectorAll('[data-project-kind]')];
   const filters = [...document.querySelectorAll('[data-project-filter]')];
