@@ -1,0 +1,10 @@
+/* Compact the two mobile home transitions shown in the reference captures. */
+@media(max-width:980px){
+ main>.hero{padding-top:16px;padding-bottom:24px;row-gap:12px}
+ main>.hero .hero-note{margin-bottom:0}
+ main>.hero .studio-scene{min-height:548px}
+}
+@media(max-width:660px){
+ main>.hero .studio-scene{min-height:488px}
+ main>.hero .hero-actions{margin-top:20px}
+}
