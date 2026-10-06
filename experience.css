@@ -25,3 +25,7 @@
 @keyframes universeAppPulse{0%,100%{box-shadow:0 0 0 #64efb800}50%{box-shadow:0 0 18px #64efb820}}
 @media(max-width:660px){.universe-app-flow{gap:6px}.universe-app-flow>div{min-height:104px;padding-inline:6px}.universe-app-flow strong{font-size:9px}.universe-brand-board{min-height:112px;gap:8px}.universe-monogram{font-size:46px}.universe-brand-kit{padding:9px}.universe-brand-kit>strong{font-size:25px}.studio-scene .iphone-pro .scene-phone-card strong{font-size:15px}.phone-mode-detail{margin-top:5px}.phone-app-list>span{padding:4px;font-size:7px}}
 @media(prefers-reduced-motion:reduce){.universe-app-flow>div{animation:none}}
+
+.studio-scene[data-demo]:not([data-demo=web]) .iphone-display{gap:3px}
+.studio-scene[data-demo]:not([data-demo=web]) .scene-phone-card strong{margin-bottom:4px;font-size:17px}
+@media(max-width:660px){.studio-scene[data-demo]:not([data-demo=web]) .scene-phone-card strong{font-size:14px}.studio-scene[data-demo]:not([data-demo=web]) .scene-phone-card{padding:8px}.studio-scene[data-demo]:not([data-demo=web]) .phone-mode-detail{margin-top:4px}}
