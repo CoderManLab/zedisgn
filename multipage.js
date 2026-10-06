@@ -43,6 +43,7 @@
     if(service && [...select.options].some(option => option.value === service)) select.value = service;
     form.addEventListener('submit', e => {
       e.preventDefault();
+      for(const field of form.querySelectorAll('input[required],textarea[required]')) field.setCustomValidity(field.value.trim()?'':'Précisez votre besoin avec du texte.');
       if(!form.reportValidity()) return;
       const data = new FormData(form);
       const value = key => String(data.get(key) || '').trim();
@@ -54,6 +55,6 @@
       preview.hidden = false;
       link.focus();
     });
-    form.addEventListener('input', () => { form.querySelector('[data-brief-preview]').hidden = true; });
+    form.addEventListener('input', e => { if(e.target.setCustomValidity)e.target.setCustomValidity(''); form.querySelector('[data-brief-preview]').hidden = true; });
   }
 })();
