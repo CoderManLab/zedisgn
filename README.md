@@ -1,6 +1,6 @@
-# ZEDISGN
+# ZEDESGIN
 
-Site officiel statique de ZEDISGN.
+Site officiel statique de ZEDESGIN.
 
 Hébergement : https://codermanlab.github.io/zedisgn/
 

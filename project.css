@@ -11,3 +11,10 @@ body.crft .showcase-ui:after{content:"";position:absolute;left:0;right:0;height:
 @keyframes spin{to{transform:rotate(360deg)}}@keyframes float{50%{transform:perspective(1000px) translateY(-12px) rotateX(1deg) rotateY(2deg)}}@keyframes scan{50%{top:82%}}@keyframes pulse{50%{transform:scale(1.14);opacity:.28}}
 @media(max-width:780px){.grid{grid-template-columns:1fr}.split{grid-template-columns:1fr}.showcase{min-height:370px}.showcase-ui{inset:10% 5%}.cta{flex-direction:column;align-items:flex-start}.brand img{width:125px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;scroll-behavior:auto!important}}
+/* Shared ZEDESGIN signature across all page families. */
+.brand:has(.zedesgin-brand-mark){display:inline-flex;align-items:center;gap:10px}
+.zedesgin-brand-mark{display:block;width:46px;height:46px;flex:0 0 46px;filter:drop-shadow(0 0 10px #29bdff33)}
+.zedesgin-brand-mark svg{display:block;width:100%;height:100%}
+.zedesgin-brand-name{font-size:1.2rem;font-weight:900;letter-spacing:.075em;color:#f7fbff;white-space:nowrap}
+.zedesgin-brand-name>span{color:#48cfff}
+@media(max-width:660px){.zedesgin-brand-mark{width:40px;height:40px;flex-basis:40px}.zedesgin-brand-name{font-size:1rem}}
