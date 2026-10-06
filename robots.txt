@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://codermanlab.github.io/zedisgn/sitemap.xml
