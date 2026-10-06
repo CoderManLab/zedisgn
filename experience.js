@@ -15,9 +15,12 @@
  };
  const buttons=[...document.querySelectorAll('[data-demo-choice]')];
  let timer;
+ const serviceLink=document.querySelector('[data-demo-service]');
+ const services={web:['service-site.html','Découvrir la création de sites'],mobile:['service-app.html','Découvrir la création d’applications'],identity:['service-branding.html','Découvrir l’identité de marque']};
  const select=key=>{
   const c=choices[key];if(!c)return;
   scene.dataset.demo=key;
+  if(serviceLink){serviceLink.href=services[key][0];serviceLink.replaceChildren(document.createTextNode(services[key][1]+' '));const arrow=document.createElement('span');arrow.setAttribute('aria-hidden','true');arrow.textContent='→';serviceLink.append(arrow)}
   document.querySelector('.demo-controls').dataset.universe=key;
   work.innerHTML=key==='web'?originalWork:layouts[key];
   const tiles=scene.querySelectorAll('.scene-phone-tiles>div');
@@ -43,7 +46,15 @@
   document.querySelector('[data-demo-status]').textContent=c.summary;
   clearTimeout(timer);scene.classList.remove('demo-changing');requestAnimationFrame(()=>{if(!reduced.matches)scene.classList.add('demo-changing')});timer=setTimeout(()=>scene.classList.remove('demo-changing'),550);
  };
- buttons.forEach(b=>b.addEventListener('click',()=>select(b.dataset.demoChoice)));
+ buttons.forEach((b,i)=>{
+  b.addEventListener('click',()=>select(b.dataset.demoChoice));
+  b.addEventListener('keydown',event=>{
+   const offsets={ArrowRight:1,ArrowLeft:-1};let next;
+   if(event.key in offsets)next=(i+offsets[event.key]+buttons.length)%buttons.length;
+   else if(event.key==='Home')next=0;else if(event.key==='End')next=buttons.length-1;else return;
+   event.preventDefault();buttons[next].focus();select(buttons[next].dataset.demoChoice);
+  });
+ });
  let visible=true;
  const pause=()=>scene.classList.toggle('demo-paused',!visible||document.hidden||reduced.matches);
  if('IntersectionObserver'in window)new IntersectionObserver(entries=>{visible=entries[0].isIntersecting;pause()},{threshold:0}).observe(scene);
