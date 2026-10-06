@@ -7,17 +7,38 @@
   mobile:{heading:['Un geste.','Une expérience.'],card:['Votre produit','à portée de main.'],title:'Mon application',caption:'Pensé pour le tactile.',work:'Du parcours au prototype',flow:['Usage','Écran','Interaction'],metrics:[['ÉCRANS','Parcours'],['APP','Tactile'],['UX','Lisibilité']],notice:'Chaque geste a sa place',detail:'Parcours · Interface · Mobile',action:'Imaginons votre app',summary:'Mobile : une interface tactile, des parcours simples et des actions accessibles.'},
   identity:{heading:['Une signature.','Une marque forte.'],card:['Votre marque','prend sa place.'],title:'Mon identité',caption:'Un univers reconnaissable.',work:'De la direction à la signature',flow:['Vision','Identité','Supports'],metrics:[['LOGO','Signature'],['COULEURS','Univers'],['DESIGN','Supports']],notice:'Une identité cohérente',detail:'Logo · Couleurs · Supports',action:'Créons votre identité',summary:'Identité : une signature, des couleurs et des supports cohérents autour de votre marque.'}
  };
+ const work=scene.querySelector('.scene-work');
+ const originalWork=work.innerHTML;
+ const layouts={
+  mobile:'<span>Un parcours, trois écrans</span><div class="universe-app-flow"><div><i></i><b>01</b><strong>Découvrir</strong><em></em><em></em><small>Explorer</small></div><div><i></i><b>02</b><strong>Choisir</strong><em></em><em></em><small>Personnaliser</small></div><div><i></i><b>03</b><strong>Créer</strong><em></em><em></em><small>Confirmer</small></div></div>',
+  identity:'<span>Votre planche de marque</span><div class="universe-brand-board"><div class="universe-monogram">Z<small>LA SIGNATURE</small></div><div class="universe-brand-kit"><div class="universe-palette"><i></i><i></i><i></i></div><strong>Aa</strong><small>Typographie · Couleurs · Supports</small></div></div>'
+ };
  const buttons=[...document.querySelectorAll('[data-demo-choice]')];
  let timer;
  const select=key=>{
   const c=choices[key];if(!c)return;
   scene.dataset.demo=key;
+  document.querySelector('.demo-controls').dataset.universe=key;
+  work.innerHTML=key==='web'?originalWork:layouts[key];
+  const tiles=scene.querySelectorAll('.scene-phone-tiles>div');
+  const tileNames=key==='identity'?['Logo','Palette','Typo']:key==='mobile'?['Accueil','Parcours','Profil']:['Web','App','Design'];
+  tiles.forEach((tile,i)=>tile.querySelector('span').textContent=tileNames[i]);
+  const projects=scene.querySelectorAll('.scene-projects>div');
+  const projectNames=key==='identity'?[['L','Logo & signature','Déclinaisons · Monogramme'],['C','Supports de marque','Carte · Affiche · Digital']]:key==='mobile'?[['UX','Parcours tactile','Découvrir · Choisir · Créer'],['UI','Composants d’application','Navigation · États · Actions']]:[['W','Site & expérience','Design · Développement'],['A','Application mobile','Interface · Interaction']];
+  projects.forEach((e,i)=>{e.querySelector('i').textContent=projectNames[i][0];const small=document.createElement('small');small.textContent=projectNames[i][2];e.querySelector('span').replaceChildren(document.createTextNode(projectNames[i][1]),small)});
+  scene.querySelector('.scene-nav').innerHTML=(key==='identity'?['Signature','Palette','Supports']:key==='mobile'?['Écrans','Parcours','Composants']:['Studio','Projets','Contact']).map(t=>'<span>'+t+'</span>').join('');
   const heading=scene.querySelector('.scene-heading');heading.replaceChildren(document.createTextNode(c.heading[0]),document.createElement('br'));const strong=document.createElement('strong');strong.textContent=c.heading[1];heading.append(strong);
   const card=scene.querySelector('.scene-phone-card strong');card.replaceChildren(document.createTextNode(c.card[0]),document.createElement('br'),document.createTextNode(c.card[1]));
-  [['.scene-card-title',c.title],['.scene-phone-caption',c.caption],['.scene-work>span',c.work],['.scene-phone-action',c.action]].forEach(([selector,text])=>scene.querySelector(selector).textContent=text);
+  [['.scene-card-title',c.title],['.scene-phone-caption',c.caption],['.scene-phone-action',c.action]].forEach(([selector,text])=>scene.querySelector(selector).textContent=text);
   scene.querySelectorAll('.scene-flow>span').forEach((e,i)=>e.textContent=c.flow[i]);
   scene.querySelectorAll('.metric-row>span').forEach((e,i)=>{const small=document.createElement('small');small.textContent=c.metrics[i][1];e.replaceChildren(document.createTextNode(c.metrics[i][0]),small)});
   const notice=scene.querySelector('.scene-phone-notice>span');const small=document.createElement('small');small.textContent=c.detail;notice.replaceChildren(document.createTextNode(c.notice),small);
+  scene.querySelector('.phone-mode-detail')?.remove();
+  if(key!=='web'){
+   const detail=document.createElement('div');detail.className='phone-mode-detail';
+   detail.innerHTML=key==='identity'?'<div class="universe-palette"><i></i><i></i><i></i></div><span class="phone-type">Aa <small>Une signature cohérente</small></span>':'<div class="phone-app-list"><span><i></i>Votre espace <b>→</b></span><span><i></i>Vos projets <b>→</b></span></div>';
+   scene.querySelector('.scene-phone-card').append(detail);
+  }
   buttons.forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.demoChoice===key)));
   document.querySelector('[data-demo-status]').textContent=c.summary;
   clearTimeout(timer);scene.classList.remove('demo-changing');requestAnimationFrame(()=>{if(!reduced.matches)scene.classList.add('demo-changing')});timer=setTimeout(()=>scene.classList.remove('demo-changing'),550);
@@ -32,3 +53,4 @@
  const syncHeader=()=>{if(getComputedStyle(header).position==='fixed')document.body.style.paddingTop=header.getBoundingClientRect().height+'px'};
  if('ResizeObserver'in window)new ResizeObserver(syncHeader).observe(header);syncHeader();
 })();
+
