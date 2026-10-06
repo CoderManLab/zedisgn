@@ -50,3 +50,4 @@
     window.open(WA+'?text='+encodeURIComponent(text),'_blank','noopener');
   });
 })();
+

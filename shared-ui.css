@@ -53,3 +53,4 @@ body{min-width:0}
 .chat-panel{left:14px;width:calc(100% - 28px)}
 }
 @media(prefers-reduced-motion:reduce){.hero-copy h1{animation:none!important;opacity:1!important;translate:none!important}}
+

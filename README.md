@@ -1,7 +1,7 @@
 # ZEDESIGN
 
-Site officiel statique de ZEDESIGN.
+Site statique multipage hébergé sur GitHub Pages.
 
-Hébergement : https://codermanlab.github.io/zedisgn/
+Navigation : accueil, services, réalisations, à propos, partenariat et contact. Assistant local et brief WhatsApp communs.
 
-Les mises à jour du site sont publiées via GitHub Pages depuis la branche `main`.
+Les projets privés sont présentés par des illustrations, sans accès à leurs applications ou données.

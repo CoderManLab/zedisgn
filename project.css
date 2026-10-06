@@ -18,3 +18,4 @@ body.crft .showcase-ui:after{content:"";position:absolute;left:0;right:0;height:
 .zedesign-brand-name{font-size:1.2rem;font-weight:900;letter-spacing:.075em;color:#f7fbff;white-space:nowrap}
 .zedesign-brand-name>span{color:#48cfff}
 @media(max-width:660px){.zedesign-brand-mark{width:40px;height:40px;flex-basis:40px}.zedesign-brand-name{font-size:1rem}}
+
