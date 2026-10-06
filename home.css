@@ -632,3 +632,6 @@ body{padding-top:78px}
 .zedesign-brand-name{font-size:1.2rem;font-weight:900;letter-spacing:.075em;color:#f7fbff;white-space:nowrap}
 .zedesign-brand-name>span{color:#48cfff}
 @media(max-width:660px){.zedesign-brand-mark{width:40px;height:40px;flex-basis:40px}.zedesign-brand-name{font-size:1rem}}
+
+/* Keep the complete active frame inside every cell, above its animated fill. */
+.trust-motion .trust-runner{z-index:4;box-sizing:border-box}
