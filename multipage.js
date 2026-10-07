@@ -41,6 +41,41 @@
 
   const form = document.querySelector('[data-brief-form]');
   if(form) {
+
+    const saveChoice=form.querySelector('[data-save-draft]'),draftStatus=form.querySelector('[data-draft-status]');
+    const draftKey='zedesign-brief-draft',fields=['service','goal','existing','timing','details'];
+    const removeDraft=()=>{try{localStorage.removeItem(draftKey)}catch{}};
+    const saveDraft=()=>{
+      if(!saveChoice?.checked){removeDraft();return}
+      try{const values=Object.fromEntries(fields.map(name=>[name,form.elements.namedItem(name).value]));
+        localStorage.setItem(draftKey,JSON.stringify({expires:Date.now()+7*24*60*60*1000,values}));
+        draftStatus.textContent='Brouillon enregistré sur cet appareil.';
+      }catch{draftStatus.textContent='Le navigateur ne permet pas la sauvegarde. Vous pouvez continuer et copier votre brief.'}
+    };
+    if(saveChoice){
+      try{const draft=JSON.parse(localStorage.getItem(draftKey)||'null');
+        if(draft&&draft.expires>Date.now()&&draft.values){
+          fields.forEach(name=>{const field=form.elements.namedItem(name),value=draft.values[name];
+            if(typeof value!=='string')return;
+            if(field.tagName==='SELECT'&&![...field.options].some(o=>o.value===value))return;
+            field.value=value.slice(0,field.maxLength>0?field.maxLength:3000);
+          });saveChoice.checked=true;draftStatus.textContent='Votre brouillon a été retrouvé.';
+        }else if(draft)removeDraft();
+      }catch{removeDraft()}
+      saveChoice.addEventListener('change',()=>{saveDraft();if(!saveChoice.checked)draftStatus.textContent='Sauvegarde désactivée. Le brouillon enregistré a été supprimé.'});
+      form.addEventListener('input',e=>{if(fields.includes(e.target.name))saveDraft()});
+      form.querySelector('[data-clear-draft]').addEventListener('click',()=>{
+        removeDraft();form.reset();saveChoice.checked=false;
+        for(const field of form.querySelectorAll('input,textarea'))field.setCustomValidity('');
+        form.querySelector('[data-brief-preview]').hidden=true;draftStatus.textContent='Brouillon et champs effacés.';
+      });
+    }
+    form.querySelector('[data-copy-brief]')?.addEventListener('click',async()=>{
+      const status=form.querySelector('[data-copy-status]'),text=form.querySelector('[data-brief-text]');
+      try{await navigator.clipboard.writeText(text.textContent);status.textContent='Brief copié. Vous pouvez le coller dans le canal de votre choix.'}
+      catch{const range=document.createRange();range.selectNodeContents(text);const selection=getSelection();selection.removeAllRanges();selection.addRange(range);status.textContent='La copie automatique est indisponible. Le texte est sélectionné : utilisez Copier.'}
+    });
+
     const service = new URLSearchParams(window.location.search).get('service');
     const select = form.elements.namedItem('service');
     if(service && [...select.options].some(option => option.value === service)) select.value = service;
