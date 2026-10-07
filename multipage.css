@@ -36,3 +36,10 @@ body{width:100%;max-width:100%;min-width:0;overflow-x:hidden}
  .hero-actions{min-width:0;max-width:100%}
  .hero-actions .btn{min-width:0;white-space:normal;overflow-wrap:anywhere}
 }
+
+/* Keep the global navigation pinned to the viewport on every page. */
+html body{overflow-x:clip}
+header.global-header{position:sticky!important;top:0;z-index:1000;transform:none!important}
+html{scroll-padding-top:110px}
+main [id]{scroll-margin-top:110px}
+@media(max-width:660px){html{scroll-padding-top:96px}main [id]{scroll-margin-top:96px}}
