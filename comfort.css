@@ -1,0 +1,5 @@
+.motion-preference{padding:0 0 22px}.motion-preference button{font:inherit;font-size:13px;min-height:44px;padding:9px 14px;border:1px solid #ffffff26;border-radius:12px;background:#ffffff06;color:#c6dfef;cursor:pointer}.motion-preference button:focus-visible{outline:2px solid #75dfff;outline-offset:4px}
+html[data-motion=reduced]{scroll-behavior:auto!important}
+html[data-motion=reduced] *,html[data-motion=reduced] *::before,html[data-motion=reduced] *::after{animation-duration:.001ms!important;animation-iteration-count:1!important;animation-delay:0ms!important;transition-duration:0ms!important;scroll-behavior:auto!important}
+html[data-motion=reduced] .reveal,html[data-motion=reduced] .motion-card{opacity:1!important;transform:none!important}
+html[data-tab-hidden] *,html[data-tab-hidden] *::before,html[data-tab-hidden] *::after{animation-play-state:paused!important}
