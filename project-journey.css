@@ -23,3 +23,19 @@ html[data-motion=reduced] .eight-grid .panel{transition:none}html[data-motion=re
 .demo-panel .btn,.eight-form .btn{display:inline-flex;align-items:center;justify-content:center;max-width:100%;min-width:0;white-space:normal;overflow-wrap:anywhere;text-align:center;line-height:1.4;vertical-align:middle}
 .demo-site-body>.btn{margin-top:20px}
 .eight-inline-links a{display:inline-flex;align-items:center;justify-content:center;min-height:44px;text-align:center;line-height:1.4;overflow-wrap:anywhere}
+
+/* Render two real layout widths, then fit the chosen preview to its stage. */
+.demo-preview-stage{position:relative;width:100%;min-width:0;overflow:hidden;border-radius:20px}
+.demo-preview-stage .demo-frame{position:absolute;top:0;left:50%;margin:0;width:960px;max-width:none;transform:translateX(-50%) scale(var(--preview-scale,1));transform-origin:top center;transition:none}
+.demo-preview-stage .demo-frame[data-size=mobile]{width:360px}
+.demo-preview-stage .demo-site-body{padding:32px}
+.demo-preview-stage .demo-site-body h3{font-size:42px}
+.demo-preview-stage .demo-site-body p{font-size:16px}
+.demo-preview-stage .demo-site-header{font-size:16px;flex-wrap:nowrap}
+.demo-preview-stage .demo-site-cards{grid-template-columns:repeat(2,minmax(0,1fr))}
+.demo-preview-stage .demo-frame[data-size=mobile] .demo-site-cards{grid-template-columns:1fr}
+.demo-preview-stage .demo-frame[data-size=mobile] .demo-site-body{padding:22px}
+.demo-preview-stage .demo-frame[data-size=mobile] .demo-site-body h3{font-size:32px}
+.demo-preview-stage .demo-frame[data-size=mobile] .demo-site-header{flex-direction:column;align-items:flex-start;gap:6px}
+.demo-preview-status{color:#a8d9eb;font-size:.88rem;margin:0 0 14px}
+.demo-tools [data-demo-size][aria-pressed=true]{background:#49c8ff;color:#041522;border-color:#49c8ff;font-weight:800}
