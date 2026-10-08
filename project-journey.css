@@ -18,3 +18,8 @@ html[data-motion=reduced] .demo-frame,html[data-motion=reduced] .demo-identity,h
 @media(max-width:560px){.demo-site-cards{grid-template-columns:1fr}.demo-identity-mark{grid-row:auto}}
 @media(prefers-reduced-motion:reduce){.eight-grid .panel{transition:none}.eight-grid .panel:hover{transform:none}}
 html[data-motion=reduced] .eight-grid .panel{transition:none}html[data-motion=reduced] .eight-grid .panel:hover{transform:none}
+
+/* Multi-line controls must remain one box, including in the mobile preview. */
+.demo-panel .btn,.eight-form .btn{display:inline-flex;align-items:center;justify-content:center;max-width:100%;min-width:0;white-space:normal;overflow-wrap:anywhere;text-align:center;line-height:1.4;vertical-align:middle}
+.demo-site-body>.btn{margin-top:20px}
+.eight-inline-links a{display:inline-flex;align-items:center;justify-content:center;min-height:44px;text-align:center;line-height:1.4;overflow-wrap:anywhere}
