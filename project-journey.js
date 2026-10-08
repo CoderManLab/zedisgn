@@ -19,7 +19,7 @@ function cart(){
  $('[data-cart-status]').textContent=count?'Panier : '+count+' article'+(count>1?'s':'')+' — '+currency.format(total):'Votre panier de démonstration est vide.';
 }
 function addProduct(name,price,quantity=1){const item=basket.get(name)||{quantity:0,price};item.quantity+=quantity;basket.set(name,item);cart()}
-$('[data-cart-add]').forEach(b=>b.addEventListener('click',()=>{addProduct(b.dataset.cartAdd,Number(b.dataset.price));const original=b.textContent;b.textContent='Ajouté au panier';setTimeout(()=>b.textContent=original,1400)}));
+$$('[data-cart-add]').forEach(b=>b.addEventListener('click',()=>{addProduct(b.dataset.cartAdd,Number(b.dataset.price));b.textContent='Ajouté au panier';setTimeout(()=>b.textContent='Ajouter au panier',1400)}));
 document.addEventListener('zed-demo-add',e=>addProduct(e.detail.name,e.detail.price,e.detail.quantity));
 $('[data-cart-reset]')?.addEventListener('click',()=>{basket.clear();cart()});
 const taskForm=$('[data-task-form]'),taskList=$('[data-task-list]');function taskStatus(){const all=$$('li',taskList);$('[data-task-status]').textContent=all.length+' tâche'+(all.length>1?'s':'')+' — '+all.filter(x=>$('input',x).checked).length+' terminée(s)';}
