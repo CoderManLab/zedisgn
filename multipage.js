@@ -1,7 +1,8 @@
 (() => {
   const button = document.querySelector('[data-site-menu]');
   const nav = document.querySelector('.site-navigation');
-  const close = () => { if(nav?.classList.contains('is-open') && nav.contains(document.activeElement)) button?.focus(); nav?.classList.remove('is-open'); button?.setAttribute('aria-expanded', 'false'); };
+  const resources = nav?.querySelector('.navigation-resources');
+  const close = () => { if(nav?.classList.contains('is-open') && nav.contains(document.activeElement)) button?.focus(); nav?.classList.remove('is-open'); button?.setAttribute('aria-expanded', 'false'); if(resources) resources.open=false; };
   button?.addEventListener('click', () => {
     const open = nav.classList.toggle('is-open');
     button.setAttribute('aria-expanded', String(open));
