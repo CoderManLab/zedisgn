@@ -1,0 +1,5 @@
+Brand icon sources (Simple Icons):
+https://github.com/simple-icons/simple-icons/blob/develop/icons/ovh.svg
+https://github.com/simple-icons/simple-icons/blob/develop/icons/android.svg
+https://github.com/simple-icons/simple-icons/blob/develop/icons/apple.svg
+Icons identify their platforms; no endorsement or partnership is implied.
