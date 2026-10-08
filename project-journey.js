@@ -7,8 +7,19 @@ function fitPreview(){if(!previewFrame||!previewStage||!previewStage.clientWidth
 if(previewFrame&&previewStage){const observer=new ResizeObserver(fitPreview);observer.observe(previewStage);observer.observe(previewFrame);requestAnimationFrame(fitPreview);document.fonts?.ready.then(fitPreview);}
 $$('[data-demo-size]').forEach(b=>b.addEventListener('click',()=>{previewFrame.dataset.size=b.dataset.demoSize;$$('[data-demo-size]').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));$('[data-preview-status]').textContent=b.dataset.demoSize==='mobile'?'Vue mobile — écran de 360 px, réduit si nécessaire.':'Vue large — écran de 960 px, réduit si nécessaire.';fitPreview();}));
 $$('[data-demo-filter]').forEach(b=>b.addEventListener('click',()=>{$$('[data-demo-filter]').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));$$('.demo-product').forEach(p=>p.hidden=b.dataset.demoFilter!=='Tous'&&p.dataset.category!==b.dataset.demoFilter);}));
-let count=0,total=0;const currency=new Intl.NumberFormat('fr-FR',{style:'currency',currency:'EUR'});const cart=()=>{$('[data-cart-status]').textContent='Panier : '+count+' article'+(count>1?'s':'')+' — '+currency.format(total);};
-$$('[data-cart-add]').forEach(b=>b.addEventListener('click',()=>{count++;total+=Number(b.dataset.price);cart();}));$('[data-cart-reset]')?.addEventListener('click',()=>{count=0;total=0;cart();});
+const basket=new Map(),currency=new Intl.NumberFormat('fr-FR',{style:'currency',currency:'EUR'}),cartItems=$('[data-cart-items]');
+function cart(){
+ let count=0,total=0;cartItems?.replaceChildren();
+ basket.forEach((item,name)=>{count+=item.quantity;total+=item.price*item.quantity;
+ const li=document.createElement('li'),label=document.createElement('span'),remove=document.createElement('button');
+ label.textContent=name+' × '+item.quantity+' — '+currency.format(item.price*item.quantity);
+ remove.type='button';remove.className='btn';remove.textContent='Retirer un article';remove.setAttribute('aria-label','Retirer un '+name);
+ remove.addEventListener('click',()=>{item.quantity--;if(!item.quantity)basket.delete(name);cart();$('[data-cart-reset]')?.focus()});
+ li.append(label,remove);cartItems?.append(li);});
+ $('[data-cart-status]').textContent=count?'Panier : '+count+' article'+(count>1?'s':'')+' — '+currency.format(total):'Votre panier de démonstration est vide.';
+}
+$$('[data-cart-add]').forEach(b=>b.addEventListener('click',()=>{const name=b.dataset.cartAdd,item=basket.get(name)||{quantity:0,price:Number(b.dataset.price)};item.quantity++;basket.set(name,item);cart()}));
+$('[data-cart-reset]')?.addEventListener('click',()=>{basket.clear();cart()});
 const taskForm=$('[data-task-form]'),taskList=$('[data-task-list]');function taskStatus(){const all=$$('li',taskList);$('[data-task-status]').textContent=all.length+' tâche'+(all.length>1?'s':'')+' — '+all.filter(x=>$('input',x).checked).length+' terminée(s)';}
 taskForm?.addEventListener('submit',e=>{e.preventDefault();const input=$('input',taskForm),value=input.value.trim();if(!value){input.setCustomValidity('Saisissez une tâche.');input.reportValidity();return;}input.setCustomValidity('');const li=document.createElement('li'),label=document.createElement('label'),check=document.createElement('input'),span=document.createElement('span'),remove=document.createElement('button');check.type='checkbox';span.textContent=value;remove.type='button';remove.className='btn';remove.textContent='Supprimer';remove.setAttribute('aria-label','Supprimer la tâche : '+value);label.append(check,span);li.append(label,remove);taskList.append(li);check.addEventListener('change',()=>{li.classList.toggle('is-done',check.checked);taskStatus();});remove.addEventListener('click',()=>{li.remove();taskStatus();input.focus();});input.value='';input.focus();taskStatus();});taskForm?.querySelector('input')?.addEventListener('input',e=>e.target.setCustomValidity(''));
 $$('[data-palette]').forEach(b=>b.addEventListener('click',()=>{$('[data-identity]').style.setProperty('--demo-accent',b.dataset.palette);$$('[data-palette]').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));$('[data-palette-status]').textContent='Direction '+b.textContent+' sélectionnée.';}));

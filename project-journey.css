@@ -39,3 +39,5 @@ html[data-motion=reduced] .eight-grid .panel{transition:none}html[data-motion=re
 .demo-preview-stage .demo-frame[data-size=mobile] .demo-site-header{flex-direction:column;align-items:flex-start;gap:6px}
 .demo-preview-status{color:#a8d9eb;font-size:.88rem;margin:0 0 14px}
 .demo-tools [data-demo-size][aria-pressed=true]{background:#49c8ff;color:#041522;border-color:#49c8ff;font-weight:800}
+
+.demo-cart-items{list-style:none;padding:0;margin:12px 0;display:grid;gap:10px}.demo-cart-items li{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;border-bottom:1px solid var(--line);padding-bottom:10px}.demo-cart-items button{min-height:44px}.demo-product svg{display:block;width:100%;height:auto}
