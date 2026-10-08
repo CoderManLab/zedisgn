@@ -43,3 +43,9 @@ header.global-header{position:sticky!important;top:0;z-index:1000;transform:none
 html{scroll-padding-top:110px}
 main [id]{scroll-margin-top:110px}
 @media(max-width:660px){html{scroll-padding-top:96px}main [id]{scroll-margin-top:96px}}
+
+/* Remove the obsolete fixed-header spacer now that navigation is sticky. */
+html body{padding-top:0}
+/* Give each footer row the same centered page gutters on every route. */
+.global-footer>.wrap{width:calc(100% - 40px);max-width:var(--max,1180px);margin-inline:auto}
+@media(max-width:1000px){.global-footer>.wrap{width:calc(100% - 28px);max-width:calc(100% - 28px)}}
