@@ -1,9 +1,11 @@
-# Publication gate for theme product sheets
+# Theme product release — original core V2.0.0
 
-Requested prices: Optimized 47 EUR; Mono-produit 47 EUR; both 77 EUR (17 EUR saving).
+Prices unchanged: Optimized 47 EUR, Mono-produit 47 EUR, bundle 77 EUR.
 
-Draft replaces custom Shopify creation with two product sheets and a catalogue at the existing service-shopify.html URL. No payment collection or public download has been added. Product copy uses features actually present in Optimized Market Pro V1.2.0.
+Two new Shopify archives were authored from an empty source directory. No Dawn/Horizon Liquid, CSS, JS, snippets, settings or locales were copied. Only 20 unmodified OFL font files and their notices were retained. Separate provenance report and hash inventory accompany the deliverables.
 
-DO NOT MERGE before distribution rights are clarified. Both ZIPs use Shopify Dawn. LICENSE.md expressly conditions theme distribution/offering for sale on the Shopify Theme Store and prohibits other uses. Official source: https://github.com/Shopify/dawn/blob/main/LICENSE.md . Obtain written permission or replace the restricted base with an independently authored, appropriately licensed base before selling full ZIPs outside that channel. Do not represent the existing ZIPs as independently licensed original themes.
+Validation: 36 browser functional/security regression checks passed using actual authored Liquid with documented Shopify tag substitutions and mocked Ajax/consent APIs; all 34 sections rendered; Shopify Theme Check zero errors/warnings; source lockfile npm audit zero known vulnerabilities. No real Shopify checkout, live app compatibility or deployment on a merchant store has been tested.
 
-Checkout and payment are not configured. Tax display, commercial terms, precise usage license and delivery process remain to be finalized before accepting orders. No Shopify checkout, performance or final privacy certification is claimed.
+Original V2 removes the specific restriction inherited from the previous Dawn-based ZIP. This is not an independent legal certification. Use the actual new V2 archives; never sell the older 1.2.0 archives under the new claim.
+
+Keep this PR a draft until real Shopify store acceptance testing and the commercial payment/delivery/license terms are finalized. No payment capture or automated public download is implemented.
