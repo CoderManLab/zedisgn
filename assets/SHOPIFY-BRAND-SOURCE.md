@@ -1,0 +1,1 @@
+Official Shopify inverted primary logo, unchanged. Source: https://www.shopify.com/brand-assets (downloaded 2026-10-13). Shopify marks belong to Shopify. Used to identify compatibility, with link to Shopify; no certification or partnership claimed.
