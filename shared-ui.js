@@ -3,7 +3,7 @@
   const menuBtn=document.querySelector('.menu-toggle');
   const nav=document.querySelector('.nav');
   if(menuBtn&&nav){menuBtn.addEventListener('click',()=>{const open=nav.classList.toggle('open');menuBtn.setAttribute('aria-expanded',String(open));});}
-  document.querySelectorAll('[data-back]').forEach(btn=>btn.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'})));
+  document.querySelectorAll('[data-back]').forEach(btn=>btn.addEventListener('click',()=>window.scrollTo({top:0,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches||document.documentElement.dataset.motion==='reduced'?'auto':'smooth'})));
 
   const form=document.querySelector('[data-contact-form]');
   form?.addEventListener('submit',e=>{
