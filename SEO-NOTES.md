@@ -7,7 +7,7 @@
 | index.html | ZEDESIGN, création digitale | Présentation, sélection de services et de projets |
 | services.html | Services de création digitale | Comparer les prestations et choisir le bon périmètre |
 | service-site.html | Création de site internet sur mesure | Pages, parcours, contenus et livrables |
-| service-shopify.html | Template Shopify sur mesure | Catalogue, fiches produits, sections et configuration |
+| service-shopify.html | Thèmes Shopify Optimized V2.8.0 | Deux thèmes, 7 styles chacun, outils de vente et guides ; configuration par le client |
 | service-app.html | Création d’application mobile | Usages, prototype, distribution et livrables |
 | service-platform.html | Plateforme et outil métier sur mesure | Rôles, données, intégrations et accès |
 | service-refonte.html | Refonte de site internet | Diagnostic, migration et conservation de l’existant |
