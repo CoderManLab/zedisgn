@@ -29,3 +29,10 @@ html[data-motion="reduced"] .identity-case-stage::before,html[data-motion="reduc
 .portfolio-grid .identity-media .identity-art-wide{width:min(78%,310px);height:135px;max-width:100%}
 .identity-case-stage .identity-art-wide{width:min(90%,475px);height:auto;max-height:245px;aspect-ratio:602/299}
 @media(max-width:670px){.portfolio-grid .identity-media .identity-art-wide{width:min(78%,290px);height:115px}.identity-case-stage .identity-art-wide{width:min(96%,400px);height:auto}}
+
+/* V3.3 CRFT: icon and brand wordmark remain separate, with no layering. */
+.identity-dual-art{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;min-width:0;max-width:92%}
+.identity-dual-art .identity-icon{width:76px;height:76px;object-fit:contain;border-radius:17px;filter:drop-shadow(0 0 15px #8b65ff44)}
+.identity-dual-art .identity-wordmark{width:min(230px,90%);height:35px;object-fit:contain}
+.identity-case-stage .identity-dual-art{gap:22px}.identity-case-stage .identity-dual-art .identity-icon{width:142px;height:142px;border-radius:28px}.identity-case-stage .identity-dual-art .identity-wordmark{width:min(340px,90%);height:70px}
+@media(max-width:670px){.identity-case-stage .identity-dual-art .identity-icon{width:118px;height:118px}.identity-case-stage .identity-dual-art .identity-wordmark{height:55px}}
