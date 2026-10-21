@@ -21,3 +21,15 @@ assert 'data-v3-share' in (root/'theme-pack.html').read_text()
 assert 'crft-logo-official.png' in (root/'realisations.html').read_text()
 assert (root/'assets/crft-logo-official.png').is_file()
 print('ZEDESIGN V3 structural checks passed:',len(records),'matrix entries')
+
+# Brand integrations must be backed by existing assets or an identified source.
+portfolio=(root/'realisations.html').read_text()
+assert 'v3-zmi-stage' in portfolio and 'assets/zmi-official-mark.svg' in portfolio
+assert 'v3-declic-stage' in portfolio and 'v3-declic-symbol' in portfolio
+assert '<div class="project-media zmi"><div class="ui-shot">' not in portfolio
+assert '<div class="project-media declic"><div class="ui-shot">' not in portfolio
+assert (root/'assets/zmi-official-mark.svg').is_file()
+for path, mark in [('realisation-zmi.html','v3-case-zmi'),('realisation-declic.html','v3-case-declic')]:
+    detail=(root/path).read_text()
+    assert mark in detail and 'portfolio-v3.css?v=brand-20261022' in detail
+print('Portfolio identity checks passed: 2 brand compositions on grid and detail pages')
