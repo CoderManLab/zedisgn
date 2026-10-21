@@ -1,0 +1,29 @@
+name: Prize Reaper case-study QA
+on:
+  pull_request:
+    paths:
+      - 'realisation-prize-reaper.html'
+      - 'prize-reaper-demo.js'
+      - 'prize-reaper-demo.css'
+      - 'prize-reaper.css'
+      - 'realisations.html'
+      - 'scripts/check_prize_case.py'
+      - '.github/workflows/prize-case-qa.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'realisation-prize-reaper.html'
+      - 'prize-reaper-demo.js'
+      - 'prize-reaper-demo.css'
+      - 'scripts/check_prize_case.py'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+      - name: Contrôle HTML, accessibilité et absence d'appels externes
+        run: python3 scripts/check_prize_case.py
