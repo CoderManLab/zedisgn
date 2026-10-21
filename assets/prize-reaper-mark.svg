@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" role="img" aria-labelledby="prtitle prdesc">
+<title id="prtitle">Prize Reaper — emblème radar</title><desc id="prdesc">Un radar circulaire bleu électrique traversé par une silhouette de vigie métallique</desc>
+<defs>
+<linearGradient id="metal" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#fff"/><stop offset=".2" stop-color="#879aad"/><stop offset=".43" stop-color="#eff8ff"/><stop offset=".63" stop-color="#303c50"/><stop offset=".87" stop-color="#b4c6dd"/><stop offset="1" stop-color="#f5fcff"/></linearGradient>
+<linearGradient id="night" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#0a192a"/><stop offset=".56" stop-color="#02070d"/><stop offset="1" stop-color="#102747"/></linearGradient>
+<linearGradient id="blue" x1="0" x2="1"><stop stop-color="#0757ff"/><stop offset=".5" stop-color="#22e2ff"/><stop offset="1" stop-color="#084bb7"/></linearGradient>
+<radialGradient id="radar"><stop stop-color="#0063ee" stop-opacity=".38"/><stop offset=".6" stop-color="#02142b"/><stop offset="1" stop-color="#020914"/></radialGradient>
+<filter id="glow" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="8" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<circle cx="415" cy="405" r="312" fill="url(#night)" stroke="#0c74de" stroke-width="6"/>
+<circle cx="415" cy="405" r="291" fill="url(#radar)" stroke="url(#blue)" stroke-width="6"/>
+<g fill="none" stroke="#169aff" opacity=".56"><circle cx="415" cy="405" r="250" stroke-width="2"/><circle cx="415" cy="405" r="194"/><circle cx="415" cy="405" r="135"/><circle cx="415" cy="405" r="72"/><path d="M125 405H706M415 110V699" stroke-width="2"/><path d="M210 200L620 611M622 198L212 611" opacity=".42"/></g>
+<path d="M415 405L675 238A304 304 0 0 1 678 557Z" fill="#007aff" opacity=".12"/><path d="M415 405L673 238" stroke="#3af4ff" stroke-width="8" filter="url(#glow)"/>
+<g fill="#37ceff" filter="url(#glow)"><circle cx="415" cy="405" r="13"/><circle cx="592" cy="295" r="7"/><circle cx="525" cy="542" r="8"/><circle cx="648" cy="421" r="6"/></g>
+<path d="M144 343C197 267 240 157 354 98C433 57 543 105 598 207C548 171 511 170 471 180C388 197 303 293 265 385C226 421 181 411 144 343Z" fill="url(#metal)" stroke="#7fe9ff" stroke-width="4"/>
+<path d="M284 377C328 255 400 157 485 143C556 137 615 220 638 305C578 260 524 246 480 265C415 294 383 356 371 423Z" fill="url(#night)" stroke="#a3c4de" stroke-width="8"/>
+<path d="M300 383C334 473 437 591 604 694C459 672 279 580 196 452L130 382C202 415 254 415 300 383Z" fill="url(#metal)" stroke="#7ae4ff" stroke-width="4"/>
+<path d="M366 347C406 325 439 319 477 319C458 348 435 362 414 365Z" fill="url(#blue)" filter="url(#glow)"/>
+<path d="M494 320C513 314 530 311 549 314L535 338 507 339Z" fill="#46e7ff" filter="url(#glow)"/>
+<path d="M189 318C280 278 332 193 425 157" stroke="#e8fbff" stroke-width="7" opacity=".83" fill="none"/>
+<path d="M198 478C323 610 441 660 560 683" stroke="#d9faff" stroke-width="6" opacity=".82" fill="none"/>
+</svg>
