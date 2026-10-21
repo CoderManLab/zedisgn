@@ -1,0 +1,1387 @@
+{
+  "schema_version": 1,
+  "generated_context": "ZEDESIGN V3 — inventaire initial du périmètre approuvé",
+  "technical_validation_policy": "Pas de statut valide sans code identifié, tests et preuves",
+  "records": [
+    {
+      "id": "OMP-001",
+      "theme": "Optimized Marketing Pro",
+      "category": "Identité",
+      "name": "Header sticky et glassmorphism",
+      "status": "non_audite",
+      "owner_scope_approved": true,
+      "technical_validation": false,
+      "commercial_availability": "a_verifier",
+      "source_files": [],
+      "commit": null,
+      "theme_version": null,
+      "tests": {
+        "functional": "non_execute",
+        "mobile": "non_execute",
+        "desktop": "non_execute"
+      },
+      "evidence": [],
+      "last_checked_at": null,
+      "blockers": [
+        "Source Shopify du thème non accessible dans le dépôt ZEDESIGN"
+      ]
+    },
+    {
+      "id": "OMP-002",
+      "theme": "Optimized Marketing Pro",
+      "category": "Identité",
+      "name": "Navigation mobile",
+      "status": "non_audite",
+      "owner_scope_approved": true,
+      "technical_validation": false,
+      "commercial_availability": "a_verifier",
+      "source_files": [],
+      "commit": null,
+      "theme_version": null,
+      "tests": {
+        "functional": "non_execute",
+        "mobile": "non_execute",
+        "desktop": "non_execute"
+      },
+      "evidence": [],
+      "last_checked_at": null,
+      "blockers": [
+        "Source Shopify du thème non accessible dans le dépôt ZEDESIGN"
+      ]
+    },
+    {
+      "id": "OMP-003",
+      "theme": "Optimized Marketing Pro",
+      "category": "Identité",
+      "name": "Palettes et dégradés",
+      "status": "non_audite",
+      "owner_scope_approved": true,
+      "technical_validation": false,
+      "commercial_availability": "a_verifier",
+      "source_files": [],
+      "commit": null,
+      "theme_version": null,
+      "tests": {
+        "functional": "non_execute",
+        "mobile": "non_execute",
+        "desktop": "non_execute"
+      },
+      "evidence": [],
+      "last_checked_at": null,
+      "blockers": [
+        "Source Shopify du thème non accessible dans le dépôt ZEDESIGN"
+      ]
+    },
+    {
+      "id": "OMP-004",
+      "theme": "Optimized Marketing Pro",
+      "category": "Identité",
+      "name": "Typographies personnalisables",
+      "status": "non_audite",
+      "owner_scope_approved": true,
+      "technical_validation": false,
+      "commercial_availability": "a_verifier",
+      "source_files": [],
+      "commit": null,
+      "theme_version": null,
+      "tests": {
+        "functional": "non_execute",
+        "mobile": "non_execute",
+        "desktop": "non_execute"
+      },
+      "evidence": [],
+      "last_checked_at": null,
+      "blockers": [
+        "Source Shopify du thème non accessible dans le dépôt ZEDESIGN"
+      ]
+    },
+    {
+      "id": "OMP-005",
+      "theme": "Optimized Marketing Pro",
+      "category": "Identité",
+      "name": "Boutons et icônes SVG",
+      "status": "non_audite",
+      "owner_scope_approved": true,
+      "technical_validation": false,
+      "commercial_availability": "a_verifier",
+      "source_files": [],
+      "commit": null,
+      "theme_version": null,
+      "tests": {
+        "functional": "non_execute",
+        "mobile": "non_execute",
+        "desktop": "non_execute"
+      },
+      "evidence": [],
+      "last_checked_at": null,
+      "blockers": [
+        "Source Shopify du thème non accessible dans le dépôt ZEDESIGN"
+      ]
+    },
+    {
+      "id": "OMP-006",
+      "theme": "Optimized Marketing Pro",
+      "category": "Produit",
+      "name": "Galerie et slider produit",
+      "status": "non_audite",
+      "owner_scope_approved": true,
+      "technical_validation": false,
+      "commercial_availability": "a_verifier",
+      "source_files": [],
+      "commit": null,
+      "theme_version": null,
+      "tests": {
+        "functional": "non_execute",
+        "mobile": "non_execute",
+        "desktop": "non_execute"
+      },
+      "evidence": [],
+      "last_checked_at": null,
+      "blockers": [
+        "Source Shopify du thème non accessible dans le dépôt ZEDESIGN"
+      ]
+    },
+    {
+      "id": "OMP-007",
+      "theme": "Optimized Marketing Pro",
+      "category": "Produit",
+      "name": "Zoom desktop et tactile",
+      "status": "non_audite",
+      "owner_scope_approved": true,
+      "technical_validation": false,
+      "commercial_availability": "a_verifier",
+      "source_files": [],
+      "commit": null,
+      "theme_version": null,
+      "tests": {
+        "functional": "non_execute",
+        "mobile": "non_execute",
+        "desktop": "non_execute"
+      },
+      "evidence": [],
+      "last_checked_at": null,
+      "blockers": [
+        "Source Shopify du thème non accessible dans le dépôt ZEDESIGN"
+      ]
+    },
+    {
+      "id": "OMP-008",
+      "theme": "Optimized Marketing Pro",
+      "category": "Produit",
+      "name": "Variantes et sélecteur de quantité",
+      "status": "non_audite",
+      "owner_scope_approved": true,
+      "technical_validation": false,
+      "commercial_availability": "a_verifier",
+      "source_files": [],
+      "commit": null,
+      "theme_version": null,
+      "tests": {
+        "functional": "non_execute",
+        "mobile": "non_execute",
+        "desktop": "non_execute"
+      },
+      "evidence": [],
+      "last_checked_at": null,
+      "blockers": [
+        "Source Shopify du thème non accessible dans le dépôt ZEDESIGN"
+      ]
+    },
+    {
+      "id": "OMP-009",
+      "theme": "Optimized Marketing Pro",
+      "category": "Produit",
+      "name": "Descriptions et FAQ dépliables",
+      "status": "non_audite",
+      "owner_scope_approved": true,
+      "technical_validation": false,
+      "commercial_availability": "a_verifier",
+      "source_files": [],
+      "commit": null,
+      "theme_version": null,
+      "tests": {
+        "functional": "non_execute",
+        "mobile": "non_execute",
+        "desktop": "non_execute"
+      },
+      "evidence": [],
+      "last_checked_at": null,
+      "blockers": [
+        "Source Shopify du thème non accessible dans le dépôt ZEDESIGN"
+      ]
+    },
+    {
+      "id": "OMP-010",
+      "theme": "Optimized Marketing Pro",
+      "category": "Achat",
+      "name": "Barre d'achat persistante",
+      "status": "non_audite",
+      "owner_scope_approved": true,
+      "technical_validation": false,
+      "commercial_availability": "a_verifier",
+      "source_files": [],
+      "commit": null,
+      "theme_version": null,
+      "tests": {
+        "functional": "non_execute",
+        "mobile": "non_execute",
+        "desktop": "non_execute"
+      },
+      "evidence": [],
+      "last_checked_at": null,
+      "blockers": [
+        "Source Shopify du thème non accessible dans le dépôt ZEDESIGN"
+      ]
+    },
+    {
+      "id": "OMP-011",
+      "theme": "Optimized Marketing Pro",
+      "category": "Achat",
+      "name": "Achat rapide",
+      "status": "non_audite",
+      "owner_scope_approved": true,
+      "technical_validation": false,
+      "commercial_availability": "a_verifier",
+      "source_files": [],
+      "commit": null,
+      "theme_version": null,
+      "tests": {
+        "functional": "non_execute",
+        "mobile": "non_execute",
+        "desktop": "non_execute"
+      },
+      "evidence": [],
+      "last_checked_at": null,
+      "blockers": [
+        "Source Shopify du thème non accessible dans le dépôt ZEDESIGN"
+      ]
+    },
+    {
+      "id": "OMP-012",
+      "theme": "Optimized Marketing Pro",
+      "category": "Achat",
+      "name": "Panier personnalisable",
+      "status": "non_audite",
+      "owner_scope_approved": true,
+      "technical_validation": false,
+      "commercial_availability": "a_verifier",
+      "source_files": [],
+      "commit": null,
+      "theme_version": null,
+      "tests": {
+        "functional": "non_execute",
+        "mobile": "non_execute",
+        "desktop": "non_execute"
+      },
+      "evidence": [],
+      "last_checked_at": null,
+      "blockers": [
+        "Source Shopify du thème non accessible dans le dépôt ZEDESIGN"
+      ]
+    },
+    {
+      "id": "OMP-013",
+      "theme": "Optimized Marketing Pro",
+      "category": "Achat",
+      "name": "Codes promotionnels",
+      "status": "non_audite",
+      "owner_scope_approved": true,
+      "technical_validation": false,
+      "commercial_availability": "a_verifier",
+      "source_files": [],
+      "commit": null,
+      "theme_version": null,
+      "tests": {
+        "functional": "non_execute",
+        "mobile": "non_execute",
+        "desktop": "non_execute"
+      },
+      "evidence": [],
+      "last_checked_at": null,
+      "blockers": [
+        "Source Shopify du thème non accessible dans le dépôt ZEDESIGN"
+      ]
+    },
+    {
+      "id": "OMP-014",
+      "theme": "Optimized Marketing Pro",
+      "category": "Achat",
+      "name": "Prix barrés et économies",
+      "status": "non_audite",
+      "owner_scope_approved": true,
+      "technical_validation": false,
+      "commercial_availability": "a_verifier",
+      "source_files": [],
+      "commit": null,
+      "theme_version": null,
+      "tests": {
+        "functional": "non_execute",
+        "mobile": "non_execute",
+        "desktop": "non_execute"
+      },
+      "evidence": [],
+      "last_checked_at": null,
+      "blockers": [
+        "Source Shopify du thème non accessible dans le dépôt ZEDESIGN"
+      ]
+    },
+    {
+      "id": "OMP-015",
+      "theme": "Optimized Marketing Pro",
+      "category": "Achat",
+      "name": "Packs et ventes additionnelles",
+      "status": "non_audite",
+      "owner_scope_approved": true,
+      "technical_validation": false,
+      "commercial_availability": "a_verifier",
+      "source_files": [],
+      "commit": null,
+      "theme_version": null,
+      "tests": {
+        "functional": "non_execute",
+        "mobile": "non_execute",
+        "desktop": "non_execute"
+      },
+      "evidence": [],
+      "last_checked_at": null,
+      "blockers": [
+        "Source Shopify du thème non accessible dans le dépôt ZEDESIGN"
+      ]
+    },
+    {
+      "id": "OMP-016",
+      "theme": "Optimized Marketing Pro",
+      "category": "Marketing",
+      "name": "Newsletter enrichie",
+      "status": "non_audite",
+      "owner_scope_approved": true,
+      "technical_validation": false,
+      "commercial_availability": "a_verifier",
+      "source_files": [],
+      "commit": null,
+      "theme_version": null,
+      "tests": {
+        "functional": "non_execute",
+        "mobile": "non_execute",
+        "desktop": "non_execute"
+      },
+      "evidence": [],
+      "last_checked_at": null,
+      "blockers": [
+        "Source Shopify du thème non accessible dans le dépôt ZEDESIGN"
+      ]
+    },
+    {
+      "id": "OMP-017",
+      "theme": "Optimized Marketing Pro",
+      "category": "Marketing",
+      "name": "Avis clients et sources externes",
+      "status": "non_audite",
+      "owner_scope_approved": true,
+      "technical_validation": false,
+      "commercial_availability": "a_verifier",
+      "source_files": [],
+      "commit": null,
+      "theme_version": null,
+      "tests": {
+        "functional": "non_execute",
+        "mobile": "non_execute",
+        "desktop": "non_execute"
+      },
+      "evidence": [],
+      "last_checked_at": null,
+      "blockers": [
+        "Source Shopify du thème non accessible dans le dépôt ZEDESIGN"
+      ]
+    },
+    {
+      "id": "OMP-018",
+      "theme": "Optimized Marketing Pro",
+      "category": "Marketing",
+      "name": "WhatsApp, chatbot et retour en haut",
+      "status": "non_audite",
+      "owner_scope_approved": true,
+      "technical_validation": false,
+      "commercial_availability": "a_verifier",
+      "source_files": [],
+      "commit": null,
+      "theme_version": null,
+      "tests": {
+        "functional": "non_execute",
+        "mobile": "non_execute",
+        "desktop": "non_execute"
+      },
+      "evidence": [],
+      "last_checked_at": null,
+      "blockers": [
+        "Source Shopify du thème non accessible dans le dépôt ZEDESIGN"
+      ]
+    },
+    {
+      "id": "OMP-019",
+      "theme": "Optimized Marketing Pro",
+      "category": "Marketing",
+      "name": "Partage social",
+      "status": "non_audite",
+      "owner_scope_approved": true,
+      "technical_validation": false,
+      "commercial_availability": "a_verifier",
+      "source_files": [],
+      "commit": null,
+      "theme_version": null,
+      "tests": {
+        "functional": "non_execute",
+        "mobile": "non_execute",
+        "desktop": "non_execute"
+      },
+      "evidence": [],
+      "last_checked_at": null,
+      "blockers": [
+        "Source Shopify du thème non accessible dans le dépôt ZEDESIGN"
+      ]
+    },
+    {
+      "id": "OMP-020",
+      "theme": "Optimized Marketing Pro",
+      "category": "International",
+      "name": "Marchés et devises",
+      "status": "non_audite",
+      "owner_scope_approved": true,
+      "technical_validation": false,
+      "commercial_availability": "a_verifier",
+      "source_files": [],
+      "commit": null,
+      "theme_version": null,
+      "tests": {
+        "functional": "non_execute",
+        "mobile": "non_execute",
+        "desktop": "non_execute"
+      },
+      "evidence": [],
+      "last_checked_at": null,
+      "blockers": [
+        "Source Shopify du thème non accessible dans le dépôt ZEDESIGN"
+      ]
+    },
+    {
+      "id": "OMP-021",
+      "theme": "Optimized Marketing Pro",
+      "category": "Technique",
+      "name": "Responsive, accessibilité et SEO",
+      "status": "non_audite",
+      "owner_scope_approved": true,
+      "technical_validation": false,
+      "commercial_availability": "a_verifier",
+      "source_files": [],
+      "commit": null,
+      "theme_version": null,
+      "tests": {
+        "functional": "non_execute",
+        "mobile": "non_execute",
+        "desktop": "non_execute"
+      },
+      "evidence": [],
+      "last_checked_at": null,
+      "blockers": [
+        "Source Shopify du thème non accessible dans le dépôt ZEDESIGN"
+      ]
+    },
+    {
+      "id": "OMP-022",
+      "theme": "Optimized Marketing Pro",
+      "category": "Technique",
+      "name": "Performance et chargement des médias",
+      "status": "non_audite",
+      "owner_scope_approved": true,
+      "technical_validation": false,
+      "commercial_availability": "a_verifier",
+      "source_files": [],
+      "commit": null,
+      "theme_version": null,
+      "tests": {
+        "functional": "non_execute",
+        "mobile": "non_execute",
+        "desktop": "non_execute"
+      },
+      "evidence": [],
+      "last_checked_at": null,
+      "blockers": [
+        "Source Shopify du thème non accessible dans le dépôt ZEDESIGN"
+      ]
+    },
+    {
+      "id": "OMP-023",
+      "theme": "Optimized Marketing Pro",
+      "category": "Produit",
+      "name": "Collections et filtres visuels",
+      "status": "non_audite",
+      "owner_scope_approved": true,
+      "technical_validation": false,
+      "commercial_availability": "a_verifier",
+      "source_files": [],
+      "commit": null,
+      "theme_version": null,
+      "tests": {
+        "functional": "non_execute",
+        "mobile": "non_execute",
+        "desktop": "non_execute"
+      },
+      "evidence": [],
+      "last_checked_at": null,
+      "blockers": [
+        "Source Shopify du thème non accessible dans le dépôt ZEDESIGN"
+      ]
+    },
+    {
+      "id": "OMP-024",
+      "theme": "Optimized Marketing Pro",
+      "category": "Produit",
+      "name": "Cartes produits enrichies",
+      "status": "non_audite",
+      "owner_scope_approved": true,
+      "technical_validation": false,
+      "commercial_availability": "a_verifier",
+      "source_files": [],
+      "commit": null,
+      "theme_version": null,
+      "tests": {
+        "functional": "non_execute",
+        "mobile": "non_execute",
+        "desktop": "non_execute"
+      },
+      "evidence": [],
+      "last_checked_at": null,
+      "blockers": [
+        "Source Shopify du thème non accessible dans le dépôt ZEDESIGN"
+      ]
+    },
+    {
+      "id": "OMP-025",
+      "theme": "Optimized Marketing Pro",
+      "category": "Produit",
+      "name": "Recherche et découverte",
+      "status": "non_audite",
+      "owner_scope_approved": true,
+      "technical_validation": false,
+      "commercial_availability": "a_verifier",
+      "source_files": [],
+      "commit": null,
+      "theme_version": null,
+      "tests": {
+        "functional": "non_execute",
+        "mobile": "non_execute",
+        "desktop": "non_execute"
+      },
+      "evidence": [],
+      "last_checked_at": null,
+      "blockers": [
+        "Source Shopify du thème non accessible dans le dépôt ZEDESIGN"
+      ]
+    },
+    {
+      "id": "OMP-026",
+      "theme": "Optimized Marketing Pro",
+      "category": "Produit",
+      "name": "Comparateur et favoris",
+      "status": "non_audite",
+      "owner_scope_approved": true,
+      "technical_validation": false,
+      "commercial_availability": "a_verifier",
+      "source_files": [],
+      "commit": null,
+      "theme_version": null,
+      "tests": {
+        "functional": "non_execute",
+        "mobile": "non_execute",
+        "desktop": "non_execute"
+      },
+      "evidence": [],
+      "last_checked_at": null,
+      "blockers": [
+        "Source Shopify du thème non accessible dans le dépôt ZEDESIGN"
+      ]
+    },
+    {
+      "id": "OMP-027",
+      "theme": "Optimized Marketing Pro",
+      "category": "Produit",
+      "name": "Quiz de sélection",
+      "status": "non_audite",
+      "owner_scope_approved": true,
+      "technical_validation": false,
+      "commercial_availability": "a_verifier",
+      "source_files": [],
+      "commit": null,
+      "theme_version": null,
+      "tests": {
+        "functional": "non_execute",
+        "mobile": "non_execute",
+        "desktop": "non_execute"
+      },
+      "evidence": [],
+      "last_checked_at": null,
+      "blockers": [
+        "Source Shopify du thème non accessible dans le dépôt ZEDESIGN"
+      ]
+    },
+    {
+      "id": "OMP-028",
+      "theme": "Optimized Marketing Pro",
+      "category": "Marketing",
+      "name": "Carrousel de recommandations",
+      "status": "non_audite",
+      "owner_scope_approved": true,
+      "technical_validation": false,
+      "commercial_availability": "a_verifier",
+      "source_files": [],
+      "commit": null,
+      "theme_version": null,
+      "tests": {
+        "functional": "non_execute",
+        "mobile": "non_execute",
+        "desktop": "non_execute"
+      },
+      "evidence": [],
+      "last_checked_at": null,
+      "blockers": [
+        "Source Shopify du thème non accessible dans le dépôt ZEDESIGN"
+      ]
+    },
+    {
+      "id": "OMP-029",
+      "theme": "Optimized Marketing Pro",
+      "category": "Marketing",
+      "name": "Comparaison et mises en scène visuelles",
+      "status": "non_audite",
+      "owner_scope_approved": true,
+      "technical_validation": false,
+      "commercial_availability": "a_verifier",
+      "source_files": [],
+      "commit": null,
+      "theme_version": null,
+      "tests": {
+        "functional": "non_execute",
+        "mobile": "non_execute",
+        "desktop": "non_execute"
+      },
+      "evidence": [],
+      "last_checked_at": null,
+      "blockers": [
+        "Source Shopify du thème non accessible dans le dépôt ZEDESIGN"
+      ]
+    },
+    {
+      "id": "OMP-030",
+      "theme": "Optimized Marketing Pro",
+      "category": "Marketing",
+      "name": "Bandeau d'annonces",
+      "status": "non_audite",
+      "owner_scope_approved": true,
+      "technical_validation": false,
+      "commercial_availability": "a_verifier",
+      "source_files": [],
+      "commit": null,
+      "theme_version": null,
+      "tests": {
+        "functional": "non_execute",
+        "mobile": "non_execute",
+        "desktop": "non_execute"
+      },
+      "evidence": [],
+      "last_checked_at": null,
+      "blockers": [
+        "Source Shopify du thème non accessible dans le dépôt ZEDESIGN"
+      ]
+    },
+    {
+      "id": "OMO-001",
+      "theme": "Optimized Mono Produit",
+      "category": "Identité",
+      "name": "Header sticky et glassmorphism",
+      "status": "non_audite",
+      "owner_scope_approved": true,
+      "technical_validation": false,
+      "commercial_availability": "a_verifier",
+      "source_files": [],
+      "commit": null,
+      "theme_version": null,
+      "tests": {
+        "functional": "non_execute",
+        "mobile": "non_execute",
+        "desktop": "non_execute"
+      },
+      "evidence": [],
+      "last_checked_at": null,
+      "blockers": [
+        "Source Shopify du thème non accessible dans le dépôt ZEDESIGN"
+      ]
+    },
+    {
+      "id": "OMO-002",
+      "theme": "Optimized Mono Produit",
+      "category": "Identité",
+      "name": "Navigation mobile",
+      "status": "non_audite",
+      "owner_scope_approved": true,
+      "technical_validation": false,
+      "commercial_availability": "a_verifier",
+      "source_files": [],
+      "commit": null,
+      "theme_version": null,
+      "tests": {
+        "functional": "non_execute",
+        "mobile": "non_execute",
+        "desktop": "non_execute"
+      },
+      "evidence": [],
+      "last_checked_at": null,
+      "blockers": [
+        "Source Shopify du thème non accessible dans le dépôt ZEDESIGN"
+      ]
+    },
+    {
+      "id": "OMO-003",
+      "theme": "Optimized Mono Produit",
+      "category": "Identité",
+      "name": "Palettes et dégradés",
+      "status": "non_audite",
+      "owner_scope_approved": true,
+      "technical_validation": false,
+      "commercial_availability": "a_verifier",
+      "source_files": [],
+      "commit": null,
+      "theme_version": null,
+      "tests": {
+        "functional": "non_execute",
+        "mobile": "non_execute",
+        "desktop": "non_execute"
+      },
+      "evidence": [],
+      "last_checked_at": null,
+      "blockers": [
+        "Source Shopify du thème non accessible dans le dépôt ZEDESIGN"
+      ]
+    },
+    {
+      "id": "OMO-004",
+      "theme": "Optimized Mono Produit",
+      "category": "Identité",
+      "name": "Typographies personnalisables",
+      "status": "non_audite",
+      "owner_scope_approved": true,
+      "technical_validation": false,
+      "commercial_availability": "a_verifier",
+      "source_files": [],
+      "commit": null,
+      "theme_version": null,
+      "tests": {
+        "functional": "non_execute",
+        "mobile": "non_execute",
+        "desktop": "non_execute"
+      },
+      "evidence": [],
+      "last_checked_at": null,
+      "blockers": [
+        "Source Shopify du thème non accessible dans le dépôt ZEDESIGN"
+      ]
+    },
+    {
+      "id": "OMO-005",
+      "theme": "Optimized Mono Produit",
+      "category": "Identité",
+      "name": "Boutons et icônes SVG",
+      "status": "non_audite",
+      "owner_scope_approved": true,
+      "technical_validation": false,
+      "commercial_availability": "a_verifier",
+      "source_files": [],
+      "commit": null,
+      "theme_version": null,
+      "tests": {
+        "functional": "non_execute",
+        "mobile": "non_execute",
+        "desktop": "non_execute"
+      },
+      "evidence": [],
+      "last_checked_at": null,
+      "blockers": [
+        "Source Shopify du thème non accessible dans le dépôt ZEDESIGN"
+      ]
+    },
+    {
+      "id": "OMO-006",
+      "theme": "Optimized Mono Produit",
+      "category": "Produit",
+      "name": "Galerie et slider produit",
+      "status": "non_audite",
+      "owner_scope_approved": true,
+      "technical_validation": false,
+      "commercial_availability": "a_verifier",
+      "source_files": [],
+      "commit": null,
+      "theme_version": null,
+      "tests": {
+        "functional": "non_execute",
+        "mobile": "non_execute",
+        "desktop": "non_execute"
+      },
+      "evidence": [],
+      "last_checked_at": null,
+      "blockers": [
+        "Source Shopify du thème non accessible dans le dépôt ZEDESIGN"
+      ]
+    },
+    {
+      "id": "OMO-007",
+      "theme": "Optimized Mono Produit",
+      "category": "Produit",
+      "name": "Zoom desktop et tactile",
+      "status": "non_audite",
+      "owner_scope_approved": true,
+      "technical_validation": false,
+      "commercial_availability": "a_verifier",
+      "source_files": [],
+      "commit": null,
+      "theme_version": null,
+      "tests": {
+        "functional": "non_execute",
+        "mobile": "non_execute",
+        "desktop": "non_execute"
+      },
+      "evidence": [],
+      "last_checked_at": null,
+      "blockers": [
+        "Source Shopify du thème non accessible dans le dépôt ZEDESIGN"
+      ]
+    },
+    {
+      "id": "OMO-008",
+      "theme": "Optimized Mono Produit",
+      "category": "Produit",
+      "name": "Variantes et sélecteur de quantité",
+      "status": "non_audite",
+      "owner_scope_approved": true,
+      "technical_validation": false,
+      "commercial_availability": "a_verifier",
+      "source_files": [],
+      "commit": null,
+      "theme_version": null,
+      "tests": {
+        "functional": "non_execute",
+        "mobile": "non_execute",
+        "desktop": "non_execute"
+      },
+      "evidence": [],
+      "last_checked_at": null,
+      "blockers": [
+        "Source Shopify du thème non accessible dans le dépôt ZEDESIGN"
+      ]
+    },
+    {
+      "id": "OMO-009",
+      "theme": "Optimized Mono Produit",
+      "category": "Produit",
+      "name": "Descriptions et FAQ dépliables",
+      "status": "non_audite",
+      "owner_scope_approved": true,
+      "technical_validation": false,
+      "commercial_availability": "a_verifier",
+      "source_files": [],
+      "commit": null,
+      "theme_version": null,
+      "tests": {
+        "functional": "non_execute",
+        "mobile": "non_execute",
+        "desktop": "non_execute"
+      },
+      "evidence": [],
+      "last_checked_at": null,
+      "blockers": [
+        "Source Shopify du thème non accessible dans le dépôt ZEDESIGN"
+      ]
+    },
+    {
+      "id": "OMO-010",
+      "theme": "Optimized Mono Produit",
+      "category": "Achat",
+      "name": "Barre d'achat persistante",
+      "status": "non_audite",
+      "owner_scope_approved": true,
+      "technical_validation": false,
+      "commercial_availability": "a_verifier",
+      "source_files": [],
+      "commit": null,
+      "theme_version": null,
+      "tests": {
+        "functional": "non_execute",
+        "mobile": "non_execute",
+        "desktop": "non_execute"
+      },
+      "evidence": [],
+      "last_checked_at": null,
+      "blockers": [
+        "Source Shopify du thème non accessible dans le dépôt ZEDESIGN"
+      ]
+    },
+    {
+      "id": "OMO-011",
+      "theme": "Optimized Mono Produit",
+      "category": "Achat",
+      "name": "Achat rapide",
+      "status": "non_audite",
+      "owner_scope_approved": true,
+      "technical_validation": false,
+      "commercial_availability": "a_verifier",
+      "source_files": [],
+      "commit": null,
+      "theme_version": null,
+      "tests": {
+        "functional": "non_execute",
+        "mobile": "non_execute",
+        "desktop": "non_execute"
+      },
+      "evidence": [],
+      "last_checked_at": null,
+      "blockers": [
+        "Source Shopify du thème non accessible dans le dépôt ZEDESIGN"
+      ]
+    },
+    {
+      "id": "OMO-012",
+      "theme": "Optimized Mono Produit",
+      "category": "Achat",
+      "name": "Panier personnalisable",
+      "status": "non_audite",
+      "owner_scope_approved": true,
+      "technical_validation": false,
+      "commercial_availability": "a_verifier",
+      "source_files": [],
+      "commit": null,
+      "theme_version": null,
+      "tests": {
+        "functional": "non_execute",
+        "mobile": "non_execute",
+        "desktop": "non_execute"
+      },
+      "evidence": [],
+      "last_checked_at": null,
+      "blockers": [
+        "Source Shopify du thème non accessible dans le dépôt ZEDESIGN"
+      ]
+    },
+    {
+      "id": "OMO-013",
+      "theme": "Optimized Mono Produit",
+      "category": "Achat",
+      "name": "Codes promotionnels",
+      "status": "non_audite",
+      "owner_scope_approved": true,
+      "technical_validation": false,
+      "commercial_availability": "a_verifier",
+      "source_files": [],
+      "commit": null,
+      "theme_version": null,
+      "tests": {
+        "functional": "non_execute",
+        "mobile": "non_execute",
+        "desktop": "non_execute"
+      },
+      "evidence": [],
+      "last_checked_at": null,
+      "blockers": [
+        "Source Shopify du thème non accessible dans le dépôt ZEDESIGN"
+      ]
+    },
+    {
+      "id": "OMO-014",
+      "theme": "Optimized Mono Produit",
+      "category": "Achat",
+      "name": "Prix barrés et économies",
+      "status": "non_audite",
+      "owner_scope_approved": true,
+      "technical_validation": false,
+      "commercial_availability": "a_verifier",
+      "source_files": [],
+      "commit": null,
+      "theme_version": null,
+      "tests": {
+        "functional": "non_execute",
+        "mobile": "non_execute",
+        "desktop": "non_execute"
+      },
+      "evidence": [],
+      "last_checked_at": null,
+      "blockers": [
+        "Source Shopify du thème non accessible dans le dépôt ZEDESIGN"
+      ]
+    },
+    {
+      "id": "OMO-015",
+      "theme": "Optimized Mono Produit",
+      "category": "Achat",
+      "name": "Packs et ventes additionnelles",
+      "status": "non_audite",
+      "owner_scope_approved": true,
+      "technical_validation": false,
+      "commercial_availability": "a_verifier",
+      "source_files": [],
+      "commit": null,
+      "theme_version": null,
+      "tests": {
+        "functional": "non_execute",
+        "mobile": "non_execute",
+        "desktop": "non_execute"
+      },
+      "evidence": [],
+      "last_checked_at": null,
+      "blockers": [
+        "Source Shopify du thème non accessible dans le dépôt ZEDESIGN"
+      ]
+    },
+    {
+      "id": "OMO-016",
+      "theme": "Optimized Mono Produit",
+      "category": "Marketing",
+      "name": "Newsletter enrichie",
+      "status": "non_audite",
+      "owner_scope_approved": true,
+      "technical_validation": false,
+      "commercial_availability": "a_verifier",
+      "source_files": [],
+      "commit": null,
+      "theme_version": null,
+      "tests": {
+        "functional": "non_execute",
+        "mobile": "non_execute",
+        "desktop": "non_execute"
+      },
+      "evidence": [],
+      "last_checked_at": null,
+      "blockers": [
+        "Source Shopify du thème non accessible dans le dépôt ZEDESIGN"
+      ]
+    },
+    {
+      "id": "OMO-017",
+      "theme": "Optimized Mono Produit",
+      "category": "Marketing",
+      "name": "Avis clients et sources externes",
+      "status": "non_audite",
+      "owner_scope_approved": true,
+      "technical_validation": false,
+      "commercial_availability": "a_verifier",
+      "source_files": [],
+      "commit": null,
+      "theme_version": null,
+      "tests": {
+        "functional": "non_execute",
+        "mobile": "non_execute",
+        "desktop": "non_execute"
+      },
+      "evidence": [],
+      "last_checked_at": null,
+      "blockers": [
+        "Source Shopify du thème non accessible dans le dépôt ZEDESIGN"
+      ]
+    },
+    {
+      "id": "OMO-018",
+      "theme": "Optimized Mono Produit",
+      "category": "Marketing",
+      "name": "WhatsApp, chatbot et retour en haut",
+      "status": "non_audite",
+      "owner_scope_approved": true,
+      "technical_validation": false,
+      "commercial_availability": "a_verifier",
+      "source_files": [],
+      "commit": null,
+      "theme_version": null,
+      "tests": {
+        "functional": "non_execute",
+        "mobile": "non_execute",
+        "desktop": "non_execute"
+      },
+      "evidence": [],
+      "last_checked_at": null,
+      "blockers": [
+        "Source Shopify du thème non accessible dans le dépôt ZEDESIGN"
+      ]
+    },
+    {
+      "id": "OMO-019",
+      "theme": "Optimized Mono Produit",
+      "category": "Marketing",
+      "name": "Partage social",
+      "status": "non_audite",
+      "owner_scope_approved": true,
+      "technical_validation": false,
+      "commercial_availability": "a_verifier",
+      "source_files": [],
+      "commit": null,
+      "theme_version": null,
+      "tests": {
+        "functional": "non_execute",
+        "mobile": "non_execute",
+        "desktop": "non_execute"
+      },
+      "evidence": [],
+      "last_checked_at": null,
+      "blockers": [
+        "Source Shopify du thème non accessible dans le dépôt ZEDESIGN"
+      ]
+    },
+    {
+      "id": "OMO-020",
+      "theme": "Optimized Mono Produit",
+      "category": "International",
+      "name": "Marchés et devises",
+      "status": "non_audite",
+      "owner_scope_approved": true,
+      "technical_validation": false,
+      "commercial_availability": "a_verifier",
+      "source_files": [],
+      "commit": null,
+      "theme_version": null,
+      "tests": {
+        "functional": "non_execute",
+        "mobile": "non_execute",
+        "desktop": "non_execute"
+      },
+      "evidence": [],
+      "last_checked_at": null,
+      "blockers": [
+        "Source Shopify du thème non accessible dans le dépôt ZEDESIGN"
+      ]
+    },
+    {
+      "id": "OMO-021",
+      "theme": "Optimized Mono Produit",
+      "category": "Technique",
+      "name": "Responsive, accessibilité et SEO",
+      "status": "non_audite",
+      "owner_scope_approved": true,
+      "technical_validation": false,
+      "commercial_availability": "a_verifier",
+      "source_files": [],
+      "commit": null,
+      "theme_version": null,
+      "tests": {
+        "functional": "non_execute",
+        "mobile": "non_execute",
+        "desktop": "non_execute"
+      },
+      "evidence": [],
+      "last_checked_at": null,
+      "blockers": [
+        "Source Shopify du thème non accessible dans le dépôt ZEDESIGN"
+      ]
+    },
+    {
+      "id": "OMO-022",
+      "theme": "Optimized Mono Produit",
+      "category": "Technique",
+      "name": "Performance et chargement des médias",
+      "status": "non_audite",
+      "owner_scope_approved": true,
+      "technical_validation": false,
+      "commercial_availability": "a_verifier",
+      "source_files": [],
+      "commit": null,
+      "theme_version": null,
+      "tests": {
+        "functional": "non_execute",
+        "mobile": "non_execute",
+        "desktop": "non_execute"
+      },
+      "evidence": [],
+      "last_checked_at": null,
+      "blockers": [
+        "Source Shopify du thème non accessible dans le dépôt ZEDESIGN"
+      ]
+    },
+    {
+      "id": "OMO-023",
+      "theme": "Optimized Mono Produit",
+      "category": "Produit",
+      "name": "Hero mono-produit immersif",
+      "status": "non_audite",
+      "owner_scope_approved": true,
+      "technical_validation": false,
+      "commercial_availability": "a_verifier",
+      "source_files": [],
+      "commit": null,
+      "theme_version": null,
+      "tests": {
+        "functional": "non_execute",
+        "mobile": "non_execute",
+        "desktop": "non_execute"
+      },
+      "evidence": [],
+      "last_checked_at": null,
+      "blockers": [
+        "Source Shopify du thème non accessible dans le dépôt ZEDESIGN"
+      ]
+    },
+    {
+      "id": "OMO-024",
+      "theme": "Optimized Mono Produit",
+      "category": "Produit",
+      "name": "Comparateur avant/après",
+      "status": "non_audite",
+      "owner_scope_approved": true,
+      "technical_validation": false,
+      "commercial_availability": "a_verifier",
+      "source_files": [],
+      "commit": null,
+      "theme_version": null,
+      "tests": {
+        "functional": "non_execute",
+        "mobile": "non_execute",
+        "desktop": "non_execute"
+      },
+      "evidence": [],
+      "last_checked_at": null,
+      "blockers": [
+        "Source Shopify du thème non accessible dans le dépôt ZEDESIGN"
+      ]
+    },
+    {
+      "id": "OMO-025",
+      "theme": "Optimized Mono Produit",
+      "category": "Produit",
+      "name": "Points interactifs sur image",
+      "status": "non_audite",
+      "owner_scope_approved": true,
+      "technical_validation": false,
+      "commercial_availability": "a_verifier",
+      "source_files": [],
+      "commit": null,
+      "theme_version": null,
+      "tests": {
+        "functional": "non_execute",
+        "mobile": "non_execute",
+        "desktop": "non_execute"
+      },
+      "evidence": [],
+      "last_checked_at": null,
+      "blockers": [
+        "Source Shopify du thème non accessible dans le dépôt ZEDESIGN"
+      ]
+    },
+    {
+      "id": "OMO-026",
+      "theme": "Optimized Mono Produit",
+      "category": "Produit",
+      "name": "Personnalisation produit",
+      "status": "non_audite",
+      "owner_scope_approved": true,
+      "technical_validation": false,
+      "commercial_availability": "a_verifier",
+      "source_files": [],
+      "commit": null,
+      "theme_version": null,
+      "tests": {
+        "functional": "non_execute",
+        "mobile": "non_execute",
+        "desktop": "non_execute"
+      },
+      "evidence": [],
+      "last_checked_at": null,
+      "blockers": [
+        "Source Shopify du thème non accessible dans le dépôt ZEDESIGN"
+      ]
+    },
+    {
+      "id": "OMO-027",
+      "theme": "Optimized Mono Produit",
+      "category": "Produit",
+      "name": "Aperçu de gravure",
+      "status": "non_audite",
+      "owner_scope_approved": true,
+      "technical_validation": false,
+      "commercial_availability": "a_verifier",
+      "source_files": [],
+      "commit": null,
+      "theme_version": null,
+      "tests": {
+        "functional": "non_execute",
+        "mobile": "non_execute",
+        "desktop": "non_execute"
+      },
+      "evidence": [],
+      "last_checked_at": null,
+      "blockers": [
+        "Source Shopify du thème non accessible dans le dépôt ZEDESIGN"
+      ]
+    },
+    {
+      "id": "OMO-028",
+      "theme": "Optimized Mono Produit",
+      "category": "Achat",
+      "name": "Offres quantitatives",
+      "status": "non_audite",
+      "owner_scope_approved": true,
+      "technical_validation": false,
+      "commercial_availability": "a_verifier",
+      "source_files": [],
+      "commit": null,
+      "theme_version": null,
+      "tests": {
+        "functional": "non_execute",
+        "mobile": "non_execute",
+        "desktop": "non_execute"
+      },
+      "evidence": [],
+      "last_checked_at": null,
+      "blockers": [
+        "Source Shopify du thème non accessible dans le dépôt ZEDESIGN"
+      ]
+    },
+    {
+      "id": "OMO-029",
+      "theme": "Optimized Mono Produit",
+      "category": "Achat",
+      "name": "Réassurance autour du CTA",
+      "status": "non_audite",
+      "owner_scope_approved": true,
+      "technical_validation": false,
+      "commercial_availability": "a_verifier",
+      "source_files": [],
+      "commit": null,
+      "theme_version": null,
+      "tests": {
+        "functional": "non_execute",
+        "mobile": "non_execute",
+        "desktop": "non_execute"
+      },
+      "evidence": [],
+      "last_checked_at": null,
+      "blockers": [
+        "Source Shopify du thème non accessible dans le dépôt ZEDESIGN"
+      ]
+    },
+    {
+      "id": "OMO-030",
+      "theme": "Optimized Mono Produit",
+      "category": "Marketing",
+      "name": "Vidéo de démonstration",
+      "status": "non_audite",
+      "owner_scope_approved": true,
+      "technical_validation": false,
+      "commercial_availability": "a_verifier",
+      "source_files": [],
+      "commit": null,
+      "theme_version": null,
+      "tests": {
+        "functional": "non_execute",
+        "mobile": "non_execute",
+        "desktop": "non_execute"
+      },
+      "evidence": [],
+      "last_checked_at": null,
+      "blockers": [
+        "Source Shopify du thème non accessible dans le dépôt ZEDESIGN"
+      ]
+    }
+  ]
+}
