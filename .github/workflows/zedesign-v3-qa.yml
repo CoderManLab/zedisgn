@@ -7,6 +7,7 @@ on:
       - "realisations.html"
       - "catalog-v3.*"
       - "portfolio-v3.css"
+      - "floating-controls.*"
       - "data/module-status.json"
       - "scripts/check_v3_catalog.py"
   workflow_dispatch:
@@ -18,4 +19,6 @@ jobs:
       - name: Validate catalogue structure
         run: python3 scripts/check_v3_catalog.py
       - name: Check JavaScript syntax
-        run: node --check catalog-v3.js
+        run: |
+          node --check catalog-v3.js
+          node --check floating-controls.js

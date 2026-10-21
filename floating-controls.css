@@ -1,2 +1,12 @@
 /* One measured placement policy for every ZEDESIGN page. */
 html body .float-stack{display:contents!important}html body .chat-float,html body .back-float,html body .wa-float{position:fixed!important;display:flex!important;align-items:center;justify-content:center;transition:background-color .2s,border-color .2s!important;z-index:1050;min-width:48px;min-height:48px;max-width:calc(100vw - 24px)}html body .chat-panel{z-index:1100;bottom:var(--float-panel-bottom,84px)!important;max-height:var(--float-panel-height,calc(100dvh - 120px))!important}html body.float-controls-compact .chat-float,html body.float-controls-compact .wa-float,html body.float-controls-compact .back-float{width:44px!important;min-width:44px!important;height:44px!important;min-height:44px!important;padding:0!important}html body.float-controls-compact .chat-float span,html body.float-controls-compact .wa-float span{display:none!important}.float-chat-expanded .chat-panel{top:var(--float-header,84px)!important;bottom:8px!important;max-height:none!important;z-index:1300}.sales-order-dock{padding-bottom:max(12px,env(safe-area-inset-bottom))}.global-footer{padding-bottom:100px}.chat-panel [data-chat-close]{min-width:44px;min-height:44px}
+
+/* V3 compact mobile floating actions. One control is visible until expansion. */
+.v3-floating-toggle{display:none;position:fixed;z-index:1150;align-items:center;justify-content:center;flex-direction:column;gap:0;width:49px;height:49px;border-radius:50%;border:1px solid #79cffa80;background:linear-gradient(150deg,#123c59,#071827);color:#e6faff;box-shadow:0 6px 25px #0008,0 0 18px #1395ee3d;cursor:pointer;backdrop-filter:blur(12px);font-size:25px;line-height:1;transition:background .2s,box-shadow .2s}
+.v3-floating-toggle[hidden]{display:none!important}.v3-toggle-label{font:600 9px/1.1 system-ui,sans-serif;letter-spacing:.01em}.v3-sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+@media(max-width:700px){
+.v3-floating-toggle:not([hidden]){display:flex}
+body.v3-actions-closed .chat-float,body.v3-actions-closed .wa-float,body.v3-actions-closed .back-float{visibility:hidden!important;pointer-events:none!important}
+body.v3-actions-open .chat-float,body.v3-actions-open .wa-float,body.v3-actions-open .back-float{visibility:visible!important}
+}
+@media(prefers-reduced-motion:reduce){.v3-floating-toggle{transition:none}}
