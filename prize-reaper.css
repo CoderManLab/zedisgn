@@ -1,0 +1,19 @@
+/* PRIZE REAPER — ZEDESIGN case study. Private pilot, temporary brand name. */
+.project-media.prize-reaper{position:relative;isolation:isolate;background:radial-gradient(circle at 50% 45%,#073777 0%,#03132e 47%,#020914 90%);overflow:hidden}
+.project-media.prize-reaper::before{content:"";position:absolute;inset:10%;border:1px solid #2daeff55;border-radius:50%;box-shadow:0 0 65px #1889ff33,inset 0 0 40px #139dff33}
+.prize-reaper .project-identity-symbol{position:relative;z-index:1;width:58%;max-height:78%;object-fit:contain;filter:drop-shadow(0 0 24px #009dff76);animation:pr-float 6s ease-in-out infinite}
+.prize-reaper .project-identity-word{position:absolute;bottom:16px;left:8px;right:8px;z-index:2;text-align:center;text-shadow:0 1px 25px #0af;font-weight:900;font-size:clamp(1.25rem,2vw,1.7rem);letter-spacing:.06em;color:#e8f5ff}
+.prize-reaper .project-identity-word span{color:#6cdbff}
+.prize-case .hero h1{background:linear-gradient(135deg,#fff 15%,#b0dcff 60%,#21b9ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.prize-brand-stage{position:relative;min-height:540px;border:1px solid #31638c;border-radius:30px;background:radial-gradient(circle at 50% 42%,#0c3672 0,#061c37 34%,#020912 80%);overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:35px 16px;isolation:isolate;box-shadow:0 30px 100px #0009}
+.prize-brand-stage::before{content:"";position:absolute;z-index:-1;inset:-15%;background:conic-gradient(from 45deg,transparent,transparent 62%,#16b4ff20 74%,transparent 82%);animation:pr-spin 16s linear infinite}
+.prize-brand-stage img{display:block;width:min(74%,390px);aspect-ratio:1;object-fit:contain;filter:drop-shadow(0 0 38px #007aff66);animation:pr-float 7s ease-in-out infinite}
+.prize-brand-stage strong{font-size:clamp(2rem,6vw,4.8rem);letter-spacing:-.065em;line-height:1.1;font-weight:950;text-shadow:0 0 32px #005dff88}
+.prize-brand-stage strong span{color:#65dfff}
+.prize-brand-stage small{display:block;margin-top:18px;color:#a6c6e1;text-align:center;letter-spacing:.13em;text-transform:uppercase;font-size:.72rem}
+.prize-brand-stage figcaption{font-size:.81rem;color:#97b2ca;text-align:center;max-width:600px;margin-top:30px;line-height:1.5}
+.prize-case .prize-truth{border-left:3px solid #4cd7ff;background:#0b253c;padding:16px 22px;border-radius:0 16px 16px 0;color:#c4dced}
+@keyframes pr-spin{to{transform:rotate(360deg)}}@keyframes pr-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+@media(max-width:670px){.prize-brand-stage{min-height:410px;border-radius:22px}.prize-brand-stage img{width:min(82%,300px)}.prize-reaper .project-identity-symbol{width:65%}}
+@media(prefers-reduced-motion:reduce){.prize-brand-stage:before,.prize-brand-stage img,.prize-reaper .project-identity-symbol{animation:none}}
+html[data-motion="reduced"] .prize-brand-stage:before,html[data-motion="reduced"] .prize-brand-stage img,html[data-motion="reduced"] .prize-reaper .project-identity-symbol{animation:none}
