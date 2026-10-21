@@ -60,3 +60,10 @@
 .v3-commercial-snapshot .v3-mini-cards i{height:72px}
 .v3-commercial-snapshot figcaption{font-size:.76rem;color:#9db8ca;line-height:1.4;margin-top:10px}
 @media(max-width:600px){.v3-commercial-snapshot .v3-mini{height:125px;min-height:125px;padding:16px 22px}}
+
+/* ZEDESIGN V3 — communicated release gate, no unverified commercial claim. */
+.v315-readiness{margin:40px 0;padding:clamp(22px,3vw,42px);border:1px solid rgba(87,184,251,.3);border-radius:28px;background:radial-gradient(ellipse at 88% 12%,rgba(32,141,231,.13),transparent 45%),linear-gradient(155deg,#0c2234,#071421);color:#eaf6ff}
+.v315-readiness-head{display:flex;justify-content:space-between;gap:22px;align-items:center}.v315-readiness-head>div{max-width:760px}.v315-readiness h2{font-size:clamp(1.9rem,3.8vw,3rem);letter-spacing:-.04em;line-height:1.15;margin:12px 0;color:#f0fbff}.v315-readiness p{color:#b7d1e2;line-height:1.65}.v315-readiness-head img{flex:0 0 64px;filter:drop-shadow(0 0 14px #3caeff44)}
+.v315-feature-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:24px 0}.v315-feature-grid article{padding:18px;background:#112c40;border:1px solid #395c7680;border-radius:17px;min-width:0}.v315-feature-grid strong{color:#f1faff;font-size:1.05rem}.v315-feature-grid p{margin:8px 0 0;font-size:.9rem}.v315-readiness-details{border-top:1px solid #416a874d;padding-top:15px}.v315-readiness-details summary{cursor:pointer;color:#9bdbff;font-weight:700}.v315-readiness-details summary:focus-visible{outline:2px solid #b5e5ff;outline-offset:4px}.v315-readiness-details>div{padding:8px 0 4px;animation:v3-reveal .26s ease-out}.v315-small-note{font-size:.8rem!important;line-height:1.55!important;color:#9dc9e9!important;margin:10px 0 14px!important}
+@media(max-width:680px){.v315-readiness{padding:20px;border-radius:20px}.v315-feature-grid{grid-template-columns:1fr}.v315-readiness-head img{width:45px;height:45px;flex-basis:45px}}
+@media(prefers-reduced-motion:reduce){.v315-readiness-details>div{animation:none}}

@@ -20,6 +20,11 @@ for page in ('index.html','service-shopify.html','theme-pack.html'):
 assert 'data-v3-share' in (root/'theme-pack.html').read_text()
 assert 'crft-logo-official.png' in (root/'realisations.html').read_text()
 assert (root/'assets/crft-logo-official.png').is_file()
+for page in ('theme-optimized.html','theme-mono-produit.html'):
+    s=(root/page).read_text()
+    assert 'id="correctifs-shopify"' in s
+    assert 'V2.15.3 ne sera annoncée' in s
+    assert 'V2.15.2' in s
 print('ZEDESIGN V3 structural checks passed:',len(records),'matrix entries')
 
 
