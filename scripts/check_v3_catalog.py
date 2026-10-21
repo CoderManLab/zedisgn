@@ -22,14 +22,23 @@ assert 'crft-logo-official.png' in (root/'realisations.html').read_text()
 assert (root/'assets/crft-logo-official.png').is_file()
 print('ZEDESIGN V3 structural checks passed:',len(records),'matrix entries')
 
-# Brand integrations must be backed by existing assets or an identified source.
+
+# V3.2 — Prize Reaper preserved and unified cards.
+from html.parser import HTMLParser
 portfolio=(root/'realisations.html').read_text()
-assert 'v3-zmi-stage' in portfolio and 'assets/zmi-official-mark.svg' in portfolio
-assert 'v3-declic-stage' in portfolio and 'v3-declic-symbol' in portfolio
-assert '<div class="project-media zmi"><div class="ui-shot">' not in portfolio
-assert '<div class="project-media declic"><div class="ui-shot">' not in portfolio
-assert (root/'assets/zmi-official-mark.svg').is_file()
-for path, mark in [('realisation-zmi.html','v3-case-zmi'),('realisation-declic.html','v3-case-declic')]:
-    detail=(root/path).read_text()
-    assert mark in detail and 'portfolio-v3.css?v=brand-20261022' in detail
-print('Portfolio identity checks passed: 2 brand compositions on grid and detail pages')
+assert portfolio.count('class="project-card identity-card"') == 7
+assert portfolio.count('class="identity-card-link"') == 7
+assert portfolio.count('class="identity-media') == 6
+assert portfolio.count('class="project-media prize-reaper"') == 1
+assert 'identity-system.css?v=unified-20261022' in portfolio
+assert (root/'assets/prize-reaper-mark.svg').is_file()
+for slug in ('zmi','declic','savage-horizon','crft-ai','ddr','syrnax'):
+    page=(root/f'realisation-{slug}.html').read_text()
+    assert page.count('class="identity-case-stage')==1,slug
+    assert '<section class="showcase"' not in page,slug
+    assert 'identity-system.css?v=unified-20261022' in page,slug
+    assert '<main' in page and '</main>' in page,slug
+prize=(root/'realisation-prize-reaper.html').read_text()
+assert '<figure class="prize-brand-stage"' in prize
+assert 'identity-case-stage' not in prize
+print("V3.2 unified portfolio checks passed: six identity panels, seven whole-card links, Prize Reaper intact.")
