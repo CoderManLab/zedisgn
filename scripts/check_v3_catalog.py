@@ -14,6 +14,10 @@ for name in ('theme-optimized.html','theme-mono-produit.html'):
     assert txt.count('<details')==txt.count('</details>'),name
     assert txt.count('<main')==txt.count('</main>')==1
     assert '47 €' in txt
+for page in ('index.html','service-shopify.html','theme-pack.html'):
+    content=(root/page).read_text()
+    assert content.count('v3-commercial-snapshot')==2,(page,'commercial previews')
+assert 'data-v3-share' in (root/'theme-pack.html').read_text()
 assert 'crft-logo-official.png' in (root/'realisations.html').read_text()
 assert (root/'assets/crft-logo-official.png').is_file()
 print('ZEDESIGN V3 structural checks passed:',len(records),'matrix entries')

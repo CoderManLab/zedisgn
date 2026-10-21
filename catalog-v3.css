@@ -53,3 +53,10 @@
 @media(max-width:650px){.v3-catalog{margin:44px 0;padding:18px;border-radius:22px}.v3-catalog-lead{align-items:start}.v3-catalog-shape{flex-basis:62px;border-radius:15px}.v3-catalog-shape img{width:45px;height:45px}.v3-module-summary{grid-template-columns:116px minmax(0,1fr);gap:12px;padding:12px}.v3-mini{min-height:120px;padding:8px}.v3-module-text strong{font-size:1rem}.v3-module-text>span{font-size:.8rem}.v3-module-body{padding:0 15px 14px}.v3-filters{flex-wrap:nowrap;overflow-x:auto;width:100%;padding:2px 0 9px;scrollbar-width:thin}.v3-filters button{white-space:nowrap;flex:0 0 auto}.v3-control-panel{gap:10px}.v3-catalog-actions button{font-size:.79rem}}
 @media(max-width:390px){.v3-module-summary{grid-template-columns:1fr}.v3-mini{min-height:100px}.v3-mini-header{max-width:280px}}
 @media(prefers-reduced-motion:reduce){.v3-module,.v3-module::before,.v3-module-text em b,.v3-filters button,.v3-catalog-actions button,.v3-share-btn{transition:none!important}.v3-module-body{animation:none}}
+
+/* Commercial entry cards: illustrative, scoped thumbnails; no fake screenshots. */
+.v3-commercial-snapshot{margin:16px 0 18px;max-width:420px}
+.v3-commercial-snapshot .v3-mini{height:145px;min-height:145px;padding:23px 35px;box-shadow:inset 0 0 38px #157acc36,0 0 24px #168aff2f}
+.v3-commercial-snapshot .v3-mini-cards i{height:72px}
+.v3-commercial-snapshot figcaption{font-size:.76rem;color:#9db8ca;line-height:1.4;margin-top:10px}
+@media(max-width:600px){.v3-commercial-snapshot .v3-mini{height:125px;min-height:125px;padding:16px 22px}}
