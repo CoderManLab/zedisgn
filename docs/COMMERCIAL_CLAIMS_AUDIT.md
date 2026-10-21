@@ -15,3 +15,7 @@
 - Disponibilité d'une démonstration SETUPLOOM et PELUSAFE ouverte au public.
 
 Les cartes V3 qualifient explicitement leurs visuels d'illustrations schématiques et ne promettent pas un score de performance.
+
+## Mise à jour du 21 octobre 2026
+
+**La référence de version 2.15.2 est confirmée** dans les ZIP et dans les deux thèmes non publiés sur les boutiques Shopify. Ancien doute 2.11.0 / 2.13.0 clos pour l’étiquette de version. Les modules et parcours commerciaux restent à auditer sur les boutiques de test.

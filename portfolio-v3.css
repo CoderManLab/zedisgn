@@ -4,3 +4,8 @@
 .project-media.prize-reaper .project-identity-symbol{filter:drop-shadow(0 0 28px #20aaff9a)}
 @media(max-width:650px){.project-media.crft .v3-project-official{top:15%;max-height:84px;padding:8px}}
 @media(prefers-reduced-motion:reduce){.project-media.prize-reaper .project-identity-symbol{animation:none}}
+
+/* ZMI original vector mark sourced from official ZMI brand kit (21 Oct 2026). */
+.project-media.zmi .v3-brand-logo-zmi{position:absolute;z-index:4;left:50%;top:35%;transform:translate(-50%,-50%);width:min(48%,190px);height:auto;filter:drop-shadow(0 0 22px #bd945166)}
+.project-media.declic .v3-declic-mark{position:absolute;z-index:4;left:50%;top:39%;transform:translate(-50%,-50%);font-size:clamp(4rem,7vw,7rem);line-height:1;font-weight:900;letter-spacing:-.09em;color:#fff;text-shadow:0 10px 50px #00aa8077}
+@media(max-width:670px){.project-media.zmi .v3-brand-logo-zmi{width:40%}.project-media.declic .v3-declic-mark{font-size:4.3rem}}

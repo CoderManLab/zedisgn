@@ -20,3 +20,11 @@
 ## Déploiement
 
 Les changements sont proposés sur branche dédiée ; pas de déploiement volontaire en production avant revue.
+
+## Complément — 21 octobre 2026
+
+- Vérification de la version 2.15.2 dans les deux archives et thèmes Shopify non publiés.
+- Mise à jour du numéro de version dans les fiches commerciales.
+- Intégration de l’emblème SVG officiel ZMI, copie fidèle du kit `ZMI-Logos-Officiels.zip`.
+- Reprise du monogramme `d.` utilisé dans l’en-tête du site Le Déclic Économies.
+- Les logos originaux DDR, SYRNAX et Savage Horizon ont été localisés dans les archives, mais ne sont pas encore importés comme fichiers graphiques dans cette branche.
