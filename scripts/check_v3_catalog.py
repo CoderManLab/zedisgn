@@ -28,7 +28,7 @@ from html.parser import HTMLParser
 portfolio=(root/'realisations.html').read_text()
 assert portfolio.count('class="project-card identity-card"') == 7
 assert portfolio.count('class="identity-card-link"') == 7
-assert portfolio.count('class="identity-media') == 6
+assert portfolio.count(' identity-media tone-') == 6
 assert portfolio.count('class="project-media prize-reaper"') == 1
 assert 'identity-system.css?v=unified-20261022' in portfolio
 assert (root/'assets/prize-reaper-mark.svg').is_file()
