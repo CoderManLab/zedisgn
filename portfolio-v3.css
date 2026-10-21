@@ -9,3 +9,27 @@
 .project-media.zmi .v3-brand-logo-zmi{position:absolute;z-index:4;left:50%;top:35%;transform:translate(-50%,-50%);width:min(48%,190px);height:auto;filter:drop-shadow(0 0 22px #bd945166)}
 .project-media.declic .v3-declic-mark{position:absolute;z-index:4;left:50%;top:39%;transform:translate(-50%,-50%);font-size:clamp(4rem,7vw,7rem);line-height:1;font-weight:900;letter-spacing:-.09em;color:#fff;text-shadow:0 10px 50px #00aa8077}
 @media(max-width:670px){.project-media.zmi .v3-brand-logo-zmi{width:40%}.project-media.declic .v3-declic-mark{font-size:4.3rem}}
+
+/* Source-backed portfolio identities — ZMI original SVG; Déclic reproduced from the original website's masthead. */
+.portfolio-grid .project-media.zmi{background:radial-gradient(circle at 50% 43%,#173b59 0,#0b2035 45%,#06121e 92%);isolation:isolate}
+.portfolio-grid .project-media.declic{background:radial-gradient(circle at 72% 32%,#1e735442,#052e28 58%,#071720 100%);isolation:isolate}
+.portfolio-grid .v3-brand-stage{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;justify-content:center;width:100%;height:100%;padding:24px;overflow:hidden}
+.portfolio-grid .v3-zmi-stage::before{content:"";position:absolute;width:220px;height:180px;left:50%;top:43%;transform:translate(-50%,-50%);background:radial-gradient(ellipse,#bd94514a,transparent 70%);filter:blur(20px);pointer-events:none}
+.portfolio-grid .v3-zmi-stage .v3-brand-logo-zmi{position:relative;z-index:3;top:auto;left:auto;transform:none;width:clamp(110px,28%,190px);height:clamp(106px,68%,172px);object-fit:contain;filter:drop-shadow(0 0 26px #bd94518a)}
+.portfolio-grid .v3-zmi-wordmark{position:relative;color:#f3e6c7;font-size:clamp(.70rem,1.3vw,.95rem);line-height:1.3;letter-spacing:.18em;text-align:center;font-weight:800;text-shadow:0 0 18px #bd945188}
+.portfolio-grid .v3-declic-stage{flex-direction:row;gap:20px;color:#f2fdf5}
+.portfolio-grid .v3-declic-symbol{width:104px;height:104px;display:grid;place-items:center;flex:0 0 auto;background:#075e45;color:#d9fb83;border-radius:22px;font-family:Arial,sans-serif;font-size:76px;line-height:1;font-weight:800;letter-spacing:-.095em;box-shadow:0 22px 44px #0006,0 0 0 1px #a5ebc229}
+.portfolio-grid .v3-declic-name{display:flex;flex-direction:column;align-items:flex-start;line-height:1.1;min-width:0;font-family:Arial,sans-serif}
+.portfolio-grid .v3-declic-name strong{font-size:clamp(1.5rem,3.5vw,2.4rem);font-weight:800;letter-spacing:-.06em;white-space:nowrap}
+.portfolio-grid .v3-declic-name small{margin-top:9px;font-size:clamp(.68rem,1.35vw,.95rem);font-weight:600;letter-spacing:.22em}
+@media(max-width:670px){.portfolio-grid .v3-brand-stage{padding:18px}.portfolio-grid .v3-zmi-stage .v3-brand-logo-zmi{width:145px;height:145px}.portfolio-grid .v3-zmi-wordmark{font-size:.73rem;letter-spacing:.14em}.portfolio-grid .v3-declic-stage{gap:13px}.portfolio-grid .v3-declic-symbol{height:82px;width:82px;font-size:60px;border-radius:18px}.portfolio-grid .v3-declic-name strong{font-size:1.7rem}.portfolio-grid .v3-declic-name small{font-size:.72rem}}
+@media(max-width:380px){.portfolio-grid .v3-declic-symbol{height:70px;width:70px;font-size:51px}.portfolio-grid .v3-declic-name strong{font-size:1.45rem}}
+/* Realisation pages: identities should remain readable above the intentionally schematic interface. */
+.showcase .v3-case-brand{position:absolute;z-index:6;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;pointer-events:none;text-align:center;background:linear-gradient(0deg,#06101d8c,#06101d0d 65%)}
+.showcase .v3-case-zmi img{width:min(34%,230px);height:min(48%,235px);object-fit:contain;filter:drop-shadow(0 0 32px #bd9451aa)}
+.showcase .v3-case-zmi strong{font-size:clamp(.95rem,2.8vw,1.55rem);letter-spacing:.16em;color:#f0e3bf}
+.showcase .v3-case-declic{flex-direction:row;gap:22px}
+.showcase .v3-case-declic .v3-declic-symbol{width:106px;height:106px;flex:0 0 auto;background:#075e45;color:#d9fb83;border-radius:23px;display:grid;place-items:center;font:800 78px/1 Arial,sans-serif;letter-spacing:-.095em}
+.showcase .v3-case-declic .v3-declic-name{display:flex;flex-direction:column;align-items:flex-start;font:800 clamp(2rem,5vw,4rem)/1.1 Arial,sans-serif;letter-spacing:-.06em}
+.showcase .v3-case-declic .v3-declic-name small{font-size:.4em;font-weight:500;letter-spacing:.22em;margin-top:7px}
+@media(max-width:590px){.showcase .v3-case-declic{gap:10px}.showcase .v3-case-declic .v3-declic-symbol{width:74px;height:74px;font-size:53px}.showcase .v3-case-declic .v3-declic-name{font-size:1.7rem}.showcase .v3-case-zmi img{width:45%}}
