@@ -1,0 +1,22 @@
+/* Isolated, accessible no-backend Prize Reaper product preview */
+.pr-demo{margin:44px 0;padding:clamp(18px,4vw,36px);border:1px solid #266395;border-radius:28px;background:linear-gradient(145deg,#081e32,#05111f);box-shadow:0 20px 65px #0008}
+.pr-demo-head{display:flex;gap:18px;justify-content:space-between;align-items:flex-start;flex-wrap:wrap}
+.pr-demo-head h2{margin:8px 0 6px;font-size:clamp(1.7rem,4vw,2.8rem);line-height:1.13;letter-spacing:-.035em}
+.pr-demo-head p{max-width:760px;color:#b3cadf;line-height:1.55}
+.pr-demo-pill{border:1px solid #2b7399;color:#b8e9ff;border-radius:999px;padding:7px 12px;font-size:.76rem}
+.pr-demo-tabs{display:flex;gap:10px;flex-wrap:wrap;margin:22px 0 18px}
+.pr-demo-tabs button{background:#102d43;border:1px solid #396282;border-radius:12px;color:#c0d9ee;font:inherit;padding:12px 18px;cursor:pointer;transition:background .2s ease,border-color .2s ease}
+.pr-demo-tabs button:hover,.pr-demo-tabs button[aria-pressed=true]{color:#fff;background:#164b73;border-color:#57d5ff}
+.pr-demo-tabs button:focus-visible{outline:3px solid #90e2ff;outline-offset:3px}
+.pr-demo-body{border:1px solid #24445c;border-radius:20px;background:radial-gradient(circle at 90% 12%,#0c4d7940,transparent 30%),#06131e;padding:clamp(16px,3vw,28px);min-height:252px}
+.pr-demo-body [hidden]{display:none!important}
+.pr-demo-view h3{margin:0 0 8px;font-size:1.3rem;color:#eff9ff}
+.pr-demo-view>p{max-width:750px;color:#a9c0d4}
+.pr-demo-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:22px}
+.pr-demo-step{border:1px solid #25435d;border-radius:16px;padding:17px;background:#0b2335}
+.pr-demo-step strong{display:block;margin-bottom:10px;color:#d9f3ff;font-size:1rem}
+.pr-demo-step small{display:block;color:#a7c5db;font-size:.88rem;line-height:1.5}
+.pr-demo-step .pr-status{display:inline-block;border:1px solid #2988b7;border-radius:20px;color:#79deff;font-size:.73rem;font-weight:750;padding:3px 9px;margin-bottom:9px}
+.pr-demo-disclaimer{margin:18px 0 0;color:#acc6da;font-size:.83rem}
+@media(max-width:720px){.pr-demo{border-radius:20px}.pr-demo-row{grid-template-columns:1fr}.pr-demo-tabs button{flex:1 1 130px}.pr-demo-body{min-height:0}}
+@media(prefers-reduced-motion:reduce){.pr-demo-tabs button{transition:none}}
