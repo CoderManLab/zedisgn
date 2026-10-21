@@ -36,3 +36,12 @@ html[data-motion="reduced"] .identity-case-stage::before,html[data-motion="reduc
 .identity-dual-art .identity-wordmark{width:min(230px,90%);height:35px;object-fit:contain}
 .identity-case-stage .identity-dual-art{gap:22px}.identity-case-stage .identity-dual-art .identity-icon{width:142px;height:142px;border-radius:28px}.identity-case-stage .identity-dual-art .identity-wordmark{width:min(340px,90%);height:70px}
 @media(max-width:670px){.identity-case-stage .identity-dual-art .identity-icon{width:118px;height:118px}.identity-case-stage .identity-dual-art .identity-wordmark{height:55px}}
+
+/* V3.6 — logos utilisateur affichés sans couches typographiques parasites */
+.official-logo-panel{display:flex!important;align-items:center;justify-content:center;overflow:hidden!important;background:radial-gradient(circle at 50% 44%,#163452,#071426 72%,#030a14 100%)}
+.official-logo-panel .official-logo-img{position:relative;z-index:2;display:block;width:min(89%,340px);height:91%;object-fit:contain;animation:pr-float 7s ease-in-out infinite;filter:drop-shadow(0 0 18px #339bec50)}
+.official-logo-stage{display:flex;align-items:center;justify-content:center;overflow:hidden;min-height:460px}
+.official-logo-stage .official-logo-img{display:block;width:min(90%,550px);height:auto;max-height:75%;object-fit:contain;animation:pr-float 7s ease-in-out infinite;filter:drop-shadow(0 0 20px #39a2ff40)}
+.official-logo-panel.crft,.official-logo-stage.tone-violet{background:radial-gradient(circle,#2e2741 0,#101527 60%,#060e18 100%)}
+@media(max-width:670px){.official-logo-stage{min-height:405px}.official-logo-stage .official-logo-img{width:88%;max-height:300px}}
+@media(prefers-reduced-motion:reduce){.official-logo-img{animation:none!important}}
