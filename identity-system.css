@@ -59,7 +59,9 @@ html[data-motion="reduced"] .identity-case-stage::before,html[data-motion="reduc
 .official-logo-stage.savage-oval{border:0;box-shadow:none}
 .official-logo-panel.savage,.official-logo-stage.savage-oval{position:relative;isolation:isolate;background:radial-gradient(ellipse at center,#15263b 0%,#0a1729 54%,#06101c 83%)!important}
 .official-logo-panel.savage::before,.official-logo-panel.savage::after,.official-logo-stage.savage-oval::before,.official-logo-stage.savage-oval::after{content:none!important}
-.official-logo-panel.savage .official-logo-img,.official-logo-stage.savage-oval .official-logo-img{position:relative;z-index:2;width:87%;height:auto;max-height:82%;object-fit:contain;mask-image:radial-gradient(ellipse 50% 50% at center,#000 62%,rgba(0,0,0,.85) 74%,transparent 100%);-webkit-mask-image:radial-gradient(ellipse 50% 50% at center,#000 62%,rgba(0,0,0,.85) 74%,transparent 100%);filter:none;animation:zed-logo-bob 5.7s ease-in-out infinite}
+.official-logo-panel.savage .official-logo-img,.official-logo-stage.savage-oval .official-logo-img{position:relative;z-index:2;width:min(87%,550px);height:auto;max-height:400px;object-fit:contain;mask-image:radial-gradient(ellipse 50% 50% at center,#000 62%,rgba(0,0,0,.85) 74%,transparent 100%);-webkit-mask-image:radial-gradient(ellipse 50% 50% at center,#000 62%,rgba(0,0,0,.85) 74%,transparent 100%);filter:none;animation:zed-logo-bob 5.7s ease-in-out infinite}
 @keyframes zed-logo-bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
 @media(prefers-reduced-motion:reduce){.official-logo-panel.savage .official-logo-img,.official-logo-stage.savage-oval .official-logo-img{animation:none!important}}
 html[data-motion="reduced"] :is(.official-logo-panel.savage,.official-logo-stage.savage-oval) .official-logo-img{animation:none!important}
+
+.official-logo-panel.savage .official-logo-img{width:min(87%,340px);max-height:82%}
