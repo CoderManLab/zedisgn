@@ -25,9 +25,9 @@ jobs:
               if p.name.lower() in {"dockerfile", "dockerfile.prod", "dockerfile.production"}:
                   body = pathlib.Path(name).read_text(encoding="utf-8", errors="replace")
                   import re
-                  if re.search(r"(?im)^\s*FROM\s+\S*php(?::|@|\s|$)", body):
+                  if re.search(r"(?im)^\s*FROM\s+\S*(?:php|wordpress)(?::|@|\s|$)", body):
                       forbidden.append(name + " (PHP Docker base image)")
           if forbidden:
               print("PHP runtime detected. Security review required:", *forbidden, sep="\n- ")
               sys.exit(1)
-          print("No PHP code, Composer manifest, or PHP Docker base image detected in tracked files.")
+          print("No PHP source, Composer manifest, or PHP/WordPress Docker base image detected in tracked files.")
