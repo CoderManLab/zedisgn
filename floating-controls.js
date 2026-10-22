@@ -8,6 +8,7 @@ const stack=document.createElement('div');stack.id='zed-floating-controls';
 stack.setAttribute('role','group');stack.setAttribute('aria-label','Actions rapides');
 document.body.append(stack);
 controls.forEach(n=>{n.inert=false;stack.append(n)});
+const arrow=document.createElement('span');arrow.className='action-arrow';arrow.setAttribute('aria-hidden','true');arrow.textContent='↑';controls[0].replaceChildren(arrow);
 document.querySelectorAll('.float-stack').forEach(n=>{if(!n.children.length)n.remove()});
 const overlays=[...document.querySelectorAll('[data-sales-dock],[data-consent-banner]')];
 function layout(){
