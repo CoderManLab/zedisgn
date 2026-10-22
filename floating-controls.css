@@ -21,3 +21,22 @@ html body .chat-panel{z-index:1100;bottom:calc(78px + env(safe-area-inset-bottom
 .sales-order-dock{padding-bottom:max(12px,env(safe-area-inset-bottom))}
 .global-footer{padding-bottom:100px}
 .chat-panel [data-chat-close]{min-width:44px;min-height:44px}
+
+/* Light animates within the dock; its anchors and hit areas never move. */
+html body #zed-floating-controls>:is(.back-float,.wa-float,.chat-float){
+ --action-glow:85,203,255;
+ animation:zed-action-aura 5s ease-in-out infinite!important;
+ transition:background-color .2s,border-color .2s,box-shadow .2s!important;
+}
+html body #zed-floating-controls>.wa-float{--action-glow:90,230,177;animation-delay:-1.6s!important}
+html body #zed-floating-controls>.chat-float{animation-delay:-3.2s!important}
+@keyframes zed-action-aura{0%,100%{box-shadow:0 4px 14px #0004,0 0 8px rgba(var(--action-glow),.12)}50%{box-shadow:0 4px 14px #0004,0 0 20px rgba(var(--action-glow),.35);border-color:rgba(var(--action-glow),.65)}}
+html body #zed-floating-controls> :is(.wa-float,.chat-float) svg{transition:transform .22s ease}
+html body #zed-floating-controls> :is(.wa-float,.chat-float):is(:hover,:focus-visible) svg{transform:scale(1.12) rotate(-6deg)}
+html body #zed-floating-controls> :is(.wa-float,.chat-float):active svg{transform:scale(.9)}
+html body #zed-floating-controls>.back-float:is(:hover,:focus-visible){background-color:rgba(25,120,175,.55)!important}
+html body #zed-floating-controls>:focus-visible{outline:2px solid #9be9ff;outline-offset:4px}
+html[data-tab-hidden] body #zed-floating-controls>*{animation-play-state:paused!important}
+html[data-motion=reduced] body #zed-floating-controls>*{animation:none!important}
+html[data-motion=reduced] body #zed-floating-controls svg{transition:none!important;transform:none!important}
+@media(prefers-reduced-motion:reduce){html body #zed-floating-controls>*{animation:none!important}html body #zed-floating-controls svg{transition:none!important;transform:none!important}}

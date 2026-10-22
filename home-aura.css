@@ -1,0 +1,13 @@
+/* Cyan aura for every content card on the home page, visible on touchscreens. */
+html body.home-page main :is(.card,.panel,.master-card,.project-selector,.process-grid>article,.guide-links>a,.trust-strip>span,.cta-band){
+ border-color:rgba(111,219,255,.3);
+ box-shadow:0 0 0 1px rgba(87,202,255,.08),0 0 22px rgba(25,168,244,.13),inset 0 0 22px rgba(53,176,255,.045);
+ transition:border-color .22s ease,box-shadow .22s ease;
+}
+html body.home-page main .motion-card::after{opacity:.7}
+html body.home-page main :is(.card,.panel,.master-card,.project-selector,.process-grid>article,.guide-links>a,.trust-strip>span,.cta-band):is(:hover,:focus-within){
+ border-color:rgba(121,230,255,.65);
+ box-shadow:0 0 0 1px rgba(110,221,255,.18),0 0 30px rgba(25,168,244,.22),inset 0 0 24px rgba(53,176,255,.07);
+}
+@media(prefers-reduced-motion:reduce){html body.home-page main *{transition-duration:0s!important}}
+html[data-motion=reduced] body.home-page main *{transition-duration:0s!important}
