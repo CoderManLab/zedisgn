@@ -1,40 +1,20 @@
-/* Stable floating controls: CSS anchors remain fixed during page scrolling. */
+/* A single viewport dock, outside footer and animated page containers. */
 (()=>{'use strict';
-const body=document.body;
-const controls=['.chat-float','.wa-float','.back-float'].map(s=>document.querySelector(s));
+const controls=['.back-float','.wa-float','.chat-float'].map(s=>document.querySelector(s));
 if(controls.some(n=>!n))return;
-const dock=document.querySelector('[data-sales-dock]');
-const consent=document.querySelector('[data-consent-banner]');
-const toggle=document.createElement('button');
-toggle.type='button';toggle.className='v3-floating-toggle';
-toggle.setAttribute('aria-label','Ouvrir les actions rapides');
-toggle.setAttribute('aria-expanded','false');
-toggle.innerHTML='<span aria-hidden="true">⋯</span><span class="v3-toggle-label">Actions</span>';
-body.append(toggle);
-// All three controls stay visible; the obsolete mobile toggle is disabled.
-toggle.hidden=true;
-let open=false;
-const shown=n=>n&&!n.hidden&&getComputedStyle(n).display!=='none'&&n.getBoundingClientRect().height>0;
+document.querySelectorAll('.v3-floating-toggle').forEach(n=>n.remove());
+document.body.classList.remove('v3-actions-open','v3-actions-closed','v3-floating-mobile');
+const stack=document.createElement('div');stack.id='zed-floating-controls';
+stack.setAttribute('role','group');stack.setAttribute('aria-label','Actions rapides');
+document.body.append(stack);
+controls.forEach(n=>{n.inert=false;stack.append(n)});
+document.querySelectorAll('.float-stack').forEach(n=>{if(!n.children.length)n.remove()});
+const overlays=[...document.querySelectorAll('[data-sales-dock],[data-consent-banner]')];
 function layout(){
- const mobile=matchMedia('(max-width:700px)').matches;
- toggle.hidden=!mobile;
- body.classList.toggle('v3-floating-mobile',mobile);
- if(!mobile)open=false;
- body.classList.remove('v3-actions-open');
- body.classList.remove('v3-actions-closed');
- toggle.setAttribute('aria-expanded',String(mobile&&open));
- toggle.setAttribute('aria-label',open?'Fermer les actions rapides':'Ouvrir les actions rapides');
- toggle.querySelector('.v3-toggle-label').textContent=open?'Fermer':'Actions';
- controls.forEach(n=>n.inert=false);
- // Recalculate only when an overlay changes, never on page scroll.
- const overlay=[dock,consent].filter(shown).map(n=>Math.max(0,innerHeight-n.getBoundingClientRect().top));
- const clearance=Math.min(innerHeight*.45,Math.max(0,...overlay));
+ const clearance=Math.max(0,...overlays.filter(n=>!n.hidden&&getComputedStyle(n).display!=='none').map(n=>Math.max(0,innerHeight-n.getBoundingClientRect().top)));
  document.documentElement.style.setProperty('--zed-floating-clearance',Math.round(clearance)+'px');
 }
-toggle.addEventListener('click',()=>{open=!open;layout()});
-document.addEventListener('keydown',e=>{if(e.key==='Escape'&&open){open=false;layout();toggle.focus()}});
-controls.forEach(n=>n.addEventListener('click',()=>{if(open){open=false;layout()}}));
 window.addEventListener('resize',layout,{passive:true});
-[dock,consent].filter(Boolean).forEach(n=>new MutationObserver(layout).observe(n,{attributes:true,attributeFilter:['hidden','class']}));
+overlays.forEach(n=>{new MutationObserver(layout).observe(n,{attributes:true,attributeFilter:['hidden','class']});new ResizeObserver(layout).observe(n)});
 layout();
 })();
