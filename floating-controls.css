@@ -40,3 +40,14 @@ html[data-tab-hidden] body #zed-floating-controls>*{animation-play-state:paused!
 html[data-motion=reduced] body #zed-floating-controls>*{animation:none!important}
 html[data-motion=reduced] body #zed-floating-controls svg{transition:none!important;transform:none!important}
 @media(prefers-reduced-motion:reduce){html body #zed-floating-controls>*{animation:none!important}html body #zed-floating-controls svg{transition:none!important;transform:none!important}}
+
+/* Recognisable icon gestures, while the 48px touch targets remain stationary. */
+html body #zed-floating-controls>.back-float .action-arrow{display:block;animation:action-arrow-lift 3.8s ease-in-out infinite}
+html body #zed-floating-controls>.wa-float svg{animation:action-wa-ring 4.6s ease-in-out infinite;transform-origin:center}
+html body #zed-floating-controls>.chat-float svg{animation:action-chat-pop 4.2s ease-in-out infinite;transform-origin:center}
+@keyframes action-arrow-lift{0%,55%,100%{transform:translateY(0)}65%,85%{transform:translateY(-5px)}75%,95%{transform:translateY(0)}}
+@keyframes action-wa-ring{0%,60%,100%{transform:rotate(0)}66%,78%{transform:rotate(-14deg)}72%,84%{transform:rotate(14deg)}90%{transform:rotate(0)}}
+@keyframes action-chat-pop{0%,60%,100%{transform:scale(1)}72%{transform:scale(1.18)}84%{transform:scale(.94)}92%{transform:scale(1.05)}}
+html[data-tab-hidden] #zed-floating-controls :is(svg,.action-arrow){animation-play-state:paused!important}
+html[data-motion=reduced] #zed-floating-controls :is(svg,.action-arrow){animation:none!important;transform:none!important}
+@media(prefers-reduced-motion:reduce){html body #zed-floating-controls :is(svg,.action-arrow){animation:none!important;transform:none!important}}

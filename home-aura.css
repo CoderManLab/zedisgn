@@ -11,3 +11,17 @@ html body.home-page main :is(.card,.panel,.master-card,.project-selector,.proces
 }
 @media(prefers-reduced-motion:reduce){html body.home-page main *{transition-duration:0s!important}}
 html[data-motion=reduced] body.home-page main *{transition-duration:0s!important}
+
+/* No translated cards or sticky touch-hover lift during scroll. */
+html body.home-page main .motion-card{transform:none!important;translate:none!important}
+html body.home-page main :is(.motion-card,.process-grid>article,.guide-links>a,.trust-strip>span){position:relative;overflow:hidden}
+html body.home-page main .home-aura-light{
+ position:absolute;inset:-50%;display:block;pointer-events:none;border:0;padding:0;margin:0;
+ background:linear-gradient(115deg,transparent 37%,rgba(87,216,255,.18) 49%,transparent 61%);
+ animation:home-aura-sweep 6s ease-in-out infinite;z-index:1;
+}
+html body.home-page main :nth-child(even)>.home-aura-light{animation-delay:-3s}
+@keyframes home-aura-sweep{0%,15%{transform:translateX(-65%);opacity:0}35%{opacity:.8}65%,100%{transform:translateX(65%);opacity:0}}
+html[data-tab-hidden] .home-aura-light{animation-play-state:paused!important}
+html[data-motion=reduced] .home-aura-light{animation:none!important;opacity:0}
+@media(prefers-reduced-motion:reduce){html body.home-page main .home-aura-light{animation:none!important;opacity:0}}
