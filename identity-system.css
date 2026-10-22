@@ -58,7 +58,11 @@ html[data-motion="reduced"] .identity-case-stage::before,html[data-motion="reduc
 /* V3.8 — feather the official artwork, without drawing an extra ellipse. */
 .official-logo-stage.savage-oval{border:0;box-shadow:none}
 .official-logo-panel.savage,.official-logo-stage.savage-oval{position:relative;isolation:isolate;background:radial-gradient(ellipse at center,#15263b 0%,#0a1729 54%,#06101c 83%)!important}
-.official-logo-panel.savage::before,.official-logo-panel.savage::after,.official-logo-stage.savage-oval::before,.official-logo-stage.savage-oval::after{content:none!important}
+.official-logo-panel.savage::after,.official-logo-stage.savage-oval::after{content:none!important}
+/* Restore the shared moving background independently of the feathered logo. */
+.official-logo-panel.savage::before,.official-logo-stage.savage-oval::before{content:""!important;position:absolute;z-index:0;inset:-50%;border:0;border-radius:0;box-shadow:none;pointer-events:none;background:conic-gradient(from 45deg,transparent,transparent 62%,color-mix(in srgb,var(--identity-main) 18%,transparent) 74%,transparent 82%);animation:pr-spin 16s linear infinite}
+@media(prefers-reduced-motion:reduce){.official-logo-panel.savage::before,.official-logo-stage.savage-oval::before{animation:none!important}}
+html[data-motion="reduced"] :is(.official-logo-panel.savage,.official-logo-stage.savage-oval)::before{animation:none!important}
 .official-logo-panel.savage .official-logo-img,.official-logo-stage.savage-oval .official-logo-img{position:relative;z-index:2;width:min(87%,550px);height:auto;max-height:400px;object-fit:contain;mask-image:radial-gradient(ellipse 50% 50% at center,#000 62%,rgba(0,0,0,.85) 74%,transparent 100%);-webkit-mask-image:radial-gradient(ellipse 50% 50% at center,#000 62%,rgba(0,0,0,.85) 74%,transparent 100%);filter:none;animation:zed-logo-bob 5.7s ease-in-out infinite}
 @keyframes zed-logo-bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
 @media(prefers-reduced-motion:reduce){.official-logo-panel.savage .official-logo-img,.official-logo-stage.savage-oval .official-logo-img{animation:none!important}}
