@@ -70,3 +70,37 @@ html body.home-page main .process-grid>article>.step-number{position:relative;is
 html body.home-page main .step-number>.dedicated-aura-border{
  position:absolute;inset:-3px;width:auto;height:auto;min-width:0;min-height:0;border-radius:50%;padding:2px;z-index:3;
 }
+
+/* Four solution-specific backdrops, clipped inside stable interactive cards. */
+html body.home-page main .aura-selector{--aura-a:#39dcff;--aura-b:#8d72ff}
+html body.home-page main .aura-selector>.dedicated-aura-border{padding:2px;animation-duration:5s}
+html body.home-page main .project-selector-grid>a{
+ position:relative;isolation:isolate;overflow:hidden;transform:none!important;
+ transition:background-color .2s,border-color .2s,box-shadow .2s;
+}
+html body.home-page main .project-selector-grid>a>*{position:relative;z-index:2}
+html body.home-page main .project-selector-grid>a::before{
+ content:"";position:absolute;inset:-30%;z-index:0;pointer-events:none;opacity:.42;
+ background:radial-gradient(ellipse at 20% 30%,#15bfff66,transparent 55%);
+ animation:solution-web-grid 7s ease-in-out infinite alternate;animation-play-state:paused;
+}
+html body.home-page main .project-selector-grid>a:nth-child(1)::before{
+ background:linear-gradient(90deg,#36d9ff20 1px,transparent 1px),linear-gradient(#36d9ff20 1px,transparent 1px),radial-gradient(ellipse,#13a9ff55,transparent 65%);background-size:28px 28px,28px 28px,100% 100%;
+}
+html body.home-page main .project-selector-grid>a:nth-child(2)::before{
+ background:radial-gradient(ellipse at 20% 20%,#62e3af66,transparent 45%),radial-gradient(ellipse at 75% 75%,#27c6a166,transparent 50%);animation-name:solution-shopify-glow;animation-delay:-2s;
+}
+html body.home-page main .project-selector-grid>a:nth-child(3)::before{
+ background:repeating-linear-gradient(120deg,transparent 0 36px,#687fff33 37px 39px,transparent 40px 76px),radial-gradient(ellipse at 50% 50%,#6659ff55,transparent 65%);animation-name:solution-app-signal;animation-delay:-3s;
+}
+html body.home-page main .project-selector-grid>a:nth-child(4)::before{
+ background:conic-gradient(from 45deg at 50% 50%,transparent,#b756e955,transparent,#ec9d5b44,transparent);animation-name:solution-identity-light;animation-delay:-4s;
+}
+html body.home-page main .aura-selector.aura-active .project-selector-grid>a::before{animation-play-state:running}
+@keyframes solution-web-grid{from{transform:translate(-3%,-2%);opacity:.25}to{transform:translate(4%,3%);opacity:.55}}
+@keyframes solution-shopify-glow{from{transform:translateY(-8%) scale(.92);opacity:.35}to{transform:translateY(8%) scale(1.08);opacity:.65}}
+@keyframes solution-app-signal{from{transform:translate(-5%,3%);opacity:.3}to{transform:translate(5%,-3%);opacity:.6}}
+@keyframes solution-identity-light{from{transform:rotate(-18deg) scale(.95);opacity:.3}to{transform:rotate(24deg) scale(1.15);opacity:.6}}
+html[data-tab-hidden] body.home-page main .project-selector-grid>a::before{animation-play-state:paused!important}
+html[data-motion=reduced] body.home-page main .project-selector-grid>a::before{animation:none!important;transform:none!important}
+@media(prefers-reduced-motion:reduce){html body.home-page main .project-selector-grid>a::before{animation:none!important;transform:none!important}}

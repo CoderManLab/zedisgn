@@ -3,14 +3,14 @@
 if(!document.body.classList.contains('home-page'))return;
 const media=matchMedia('(prefers-reduced-motion: reduce)');
 const reduced=()=>media.matches||document.documentElement.dataset.motion==='reduced';
-const hosts=[...document.querySelectorAll('.process-grid>article,.home-page .cta-band,.home-page .trust-strip')];
+const hosts=[...document.querySelectorAll('.process-grid>article,.home-page .cta-band,.home-page .trust-strip,.home-page .project-selector')];
 hosts.forEach((host,i)=>{
  host.classList.add('dedicated-aura');host.style.setProperty('--aura-phase',(-i*1.7)+'s');
- const isStep=host.matches('.process-grid>article'),isTrust=host.matches('.trust-strip');
- host.classList.add(isTrust?'aura-trust':isStep?'aura-step-'+(i+1):'aura-project');
+ const isStep=host.matches('.process-grid>article'),isTrust=host.matches('.trust-strip'),isSelector=host.matches('.project-selector');
+ host.classList.add(isSelector?'aura-selector':isTrust?'aura-trust':isStep?'aura-step-'+(i+1):'aura-project');
  const number=isStep?host.querySelector(':scope>span'):null;
  if(number)number.classList.add('step-number');
- for(const name of isTrust?['dedicated-aura-border']:['dedicated-aura-bg','dedicated-aura-border']){
+ for(const name of (isTrust||isSelector)?['dedicated-aura-border']:['dedicated-aura-bg','dedicated-aura-border']){
   const layer=document.createElement('div');layer.className=name;layer.setAttribute('aria-hidden','true');
   (name==='dedicated-aura-border'&&number?number:host).append(layer);
  }
