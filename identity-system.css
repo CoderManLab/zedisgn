@@ -65,3 +65,6 @@ html[data-motion="reduced"] .identity-case-stage::before,html[data-motion="reduc
 html[data-motion="reduced"] :is(.official-logo-panel.savage,.official-logo-stage.savage-oval) .official-logo-img{animation:none!important}
 
 .official-logo-panel.savage .official-logo-img{width:min(87%,340px);max-height:82%}
+
+/* Keep the feathering box aligned with the square source artwork. */
+.official-logo-stage.savage-oval .official-logo-img{width:min(87%,400px);height:auto;max-height:none}

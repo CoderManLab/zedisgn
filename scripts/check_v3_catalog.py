@@ -35,13 +35,13 @@ assert portfolio.count('class="project-card identity-card"') == 7
 assert portfolio.count('class="identity-card-link"') == 7
 assert portfolio.count(' identity-media tone-') == 6
 assert portfolio.count('class="project-media prize-reaper"') == 1
-assert 'identity-system.css?v=v38-final2-20261022' in portfolio
+assert 'identity-system.css?v=v38-release-20261022' in portfolio
 assert (root/'assets/prize-reaper-mark.svg').is_file()
 for slug in ('zmi','declic','savage-horizon','crft-ai','ddr','syrnax'):
     page=(root/f'realisation-{slug}.html').read_text()
     assert page.count('class="identity-case-stage')==1,slug
     assert '<section class="showcase"' not in page,slug
-    assert ('identity-system.css?v=v38-final2-20261022' if slug in ('savage-horizon','crft-ai') else 'identity-system.css?v=v38-final2-20261022' if slug=='syrnax' else 'identity-system.css?v=v38-final2-20261022') in page,slug
+    assert ('identity-system.css?v=v38-release-20261022' if slug in ('savage-horizon','crft-ai') else 'identity-system.css?v=v38-release-20261022' if slug=='syrnax' else 'identity-system.css?v=v38-release-20261022') in page,slug
     assert '<main' in page and '</main>' in page,slug
 prize=(root/'realisation-prize-reaper.html').read_text()
 assert '<figure class="prize-brand-stage"' in prize
