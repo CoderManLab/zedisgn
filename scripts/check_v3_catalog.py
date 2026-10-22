@@ -18,7 +18,7 @@ for page in ('index.html','service-shopify.html','theme-pack.html'):
     content=(root/page).read_text()
     assert content.count('v3-commercial-snapshot')==2,(page,'commercial previews')
 assert 'data-v3-share' in (root/'theme-pack.html').read_text()
-assert 'crft-logo-official.png' in (root/'realisations.html').read_text()
+assert 'assets/crft-v36.webp' in (root/'realisations.html').read_text()
 assert (root/'assets/crft-logo-official.png').is_file()
 for page in ('theme-optimized.html','theme-mono-produit.html'):
     s=(root/page).read_text()
@@ -35,15 +35,21 @@ assert portfolio.count('class="project-card identity-card"') == 7
 assert portfolio.count('class="identity-card-link"') == 7
 assert portfolio.count(' identity-media tone-') == 6
 assert portfolio.count('class="project-media prize-reaper"') == 1
-assert 'identity-system.css?v=unified-20261022' in portfolio
+assert 'identity-system.css?v=assets-v36' in portfolio
 assert (root/'assets/prize-reaper-mark.svg').is_file()
 for slug in ('zmi','declic','savage-horizon','crft-ai','ddr','syrnax'):
     page=(root/f'realisation-{slug}.html').read_text()
     assert page.count('class="identity-case-stage')==1,slug
     assert '<section class="showcase"' not in page,slug
-    assert 'identity-system.css?v=unified-20261022' in page,slug
+    assert ('identity-system.css?v=assets-v36' if slug in ('savage-horizon','syrnax','crft-ai') else 'identity-system.css?v=unified-20261022') in page,slug
     assert '<main' in page and '</main>' in page,slug
 prize=(root/'realisation-prize-reaper.html').read_text()
 assert '<figure class="prize-brand-stage"' in prize
 assert 'identity-case-stage' not in prize
 print("V3.2 unified portfolio checks passed: six identity panels, seven whole-card links, Prize Reaper intact.")
+
+for slug in ('savage-horizon','syrnax','crft'):
+    assert (root/'assets'/f'{slug}-v36.webp').is_file()
+assert 'zed-aura-spin' in (root/'assistant.css').read_text()
+assert 'zed-chat-close' in (root/'assistant.js').read_text()
+print('V3.6 identities and assistant animations validated')
