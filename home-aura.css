@@ -25,3 +25,35 @@ html body.home-page main :nth-child(even)>.home-aura-light{animation-delay:-3s}
 html[data-tab-hidden] .home-aura-light{animation-play-state:paused!important}
 html[data-motion=reduced] .home-aura-light{animation:none!important;opacity:0}
 @media(prefers-reduced-motion:reduce){html body.home-page main .home-aura-light{animation:none!important;opacity:0}}
+
+/* Fast, single-layer entrance; content geometry stays stable. */
+html body.home-page main .home-enter{opacity:0;animation:none!important;transition:opacity .36s ease-out!important}
+html body.home-page main .home-enter.home-arrived{opacity:1}
+@property --zed-edge-angle{syntax:"<angle>";inherits:false;initial-value:0deg}
+/* Dedicated backgrounds and travelling border lights for the requested panels. */
+html body.home-page main .dedicated-aura{position:relative;isolation:isolate;overflow:hidden;--aura-a:#28c9ff;--aura-b:#8065ff}
+html body.home-page main .aura-step-2{--aura-a:#8b75ff;--aura-b:#36dfff}
+html body.home-page main .aura-step-3{--aura-a:#16cdb6;--aura-b:#198dff}
+html body.home-page main .aura-step-4{--aura-a:#48b8ff;--aura-b:#c495ff}
+html body.home-page main .aura-project{--aura-a:#17bfff;--aura-b:#4a53ff;background-color:#092238}
+html body.home-page main .dedicated-aura>:not(.dedicated-aura-bg):not(.dedicated-aura-border){position:relative;z-index:2}
+html body.home-page main .dedicated-aura>.dedicated-aura-bg{
+ position:absolute;inset:-35%;z-index:0;pointer-events:none;margin:0;padding:0;border:0;border-radius:0;
+ background:radial-gradient(ellipse at 25% 30%,color-mix(in srgb,var(--aura-a) 36%,transparent),transparent 48%),radial-gradient(ellipse at 75% 70%,color-mix(in srgb,var(--aura-b) 28%,transparent),transparent 52%);
+ animation:dedicated-nebula 7s ease-in-out infinite alternate;animation-delay:var(--aura-phase);animation-play-state:paused;
+}
+html body.home-page main .dedicated-aura>.dedicated-aura-border{
+ position:absolute;inset:0;z-index:3;pointer-events:none;padding:2px;margin:0;border:0;border-radius:inherit;
+ background:conic-gradient(from var(--zed-edge-angle),transparent 5%,var(--aura-a) 16%,#d9faff 20%,transparent 28%,transparent 56%,var(--aura-b) 69%,transparent 81%);
+ -webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);-webkit-mask-composite:xor;mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);mask-composite:exclude;
+ animation:dedicated-edge 4s linear infinite;animation-delay:var(--aura-phase);animation-play-state:paused;
+}
+html body.home-page main .aura-project>.dedicated-aura-bg{animation-duration:5s}
+html body.home-page main .aura-project>.dedicated-aura-border{padding:3px;animation-duration:2.8s}
+html body.home-page main .aura-active>:is(.dedicated-aura-bg,.dedicated-aura-border){animation-play-state:running}
+@keyframes dedicated-nebula{from{transform:translate(-7%,-4%) rotate(-8deg);opacity:.65}to{transform:translate(7%,5%) rotate(12deg);opacity:1}}
+@keyframes dedicated-edge{from{--zed-edge-angle:0deg;opacity:.8}to{--zed-edge-angle:360deg;opacity:1}}
+html[data-tab-hidden] body.home-page main .dedicated-aura>span{animation-play-state:paused!important}
+html[data-motion=reduced] body.home-page main .home-enter{opacity:1;transition:none!important}
+html[data-motion=reduced] body.home-page main .dedicated-aura>span{animation:none!important;transform:none!important}
+@media(prefers-reduced-motion:reduce){html body.home-page main .home-enter{opacity:1;transition:none!important}html body.home-page main .dedicated-aura>span{animation:none!important;transform:none!important}}
