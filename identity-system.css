@@ -55,20 +55,8 @@ html[data-motion="reduced"] .identity-case-stage::before,html[data-motion="reduc
 @media(max-width:670px){.official-logo-panel.crft-composed .crft-icon{width:95px;height:95px}.official-logo-stage.crft-composed .crft-icon{width:135px;height:135px}.official-logo-stage.crft-composed .crft-wordmark{width:68%;height:56px}}
 @media(prefers-reduced-motion:reduce){.crft-composed .crft-icon{animation:none!important}}
 
-/* V3.8 — feather the official artwork, without drawing an extra ellipse. */
-.official-logo-stage.savage-oval{border:0;box-shadow:none}
-.official-logo-panel.savage,.official-logo-stage.savage-oval{position:relative;isolation:isolate;background:radial-gradient(ellipse at center,#15263b 0%,#0a1729 54%,#06101c 83%)!important}
-.official-logo-panel.savage::after,.official-logo-stage.savage-oval::after{content:none!important}
-/* Restore the shared moving background independently of the feathered logo. */
-.official-logo-panel.savage::before,.official-logo-stage.savage-oval::before{content:""!important;position:absolute;z-index:0;inset:-50%;border:0;border-radius:0;box-shadow:none;pointer-events:none;background:conic-gradient(from 45deg,transparent,transparent 62%,color-mix(in srgb,var(--identity-main) 18%,transparent) 74%,transparent 82%);animation:pr-spin 16s linear infinite}
-@media(prefers-reduced-motion:reduce){.official-logo-panel.savage::before,.official-logo-stage.savage-oval::before{animation:none!important}}
-html[data-motion="reduced"] :is(.official-logo-panel.savage,.official-logo-stage.savage-oval)::before{animation:none!important}
-.official-logo-panel.savage .official-logo-img,.official-logo-stage.savage-oval .official-logo-img{position:relative;z-index:2;width:min(87%,550px);height:auto;max-height:400px;object-fit:contain;mask-image:radial-gradient(ellipse 50% 50% at center,#000 62%,rgba(0,0,0,.85) 74%,transparent 100%);-webkit-mask-image:radial-gradient(ellipse 50% 50% at center,#000 62%,rgba(0,0,0,.85) 74%,transparent 100%);filter:none;animation:zed-logo-bob 5.7s ease-in-out infinite}
-@keyframes zed-logo-bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
-@media(prefers-reduced-motion:reduce){.official-logo-panel.savage .official-logo-img,.official-logo-stage.savage-oval .official-logo-img{animation:none!important}}
-html[data-motion="reduced"] :is(.official-logo-panel.savage,.official-logo-stage.savage-oval) .official-logo-img{animation:none!important}
-
-.official-logo-panel.savage .official-logo-img{width:min(87%,340px);max-height:82%}
-
-/* Keep the feathering box aligned with the square source artwork. */
-.official-logo-stage.savage-oval .official-logo-img{width:min(87%,400px);height:auto;max-height:none}
+/* Savage Horizon uses the shared identity-media / identity-case-stage background,
+   ellipse, frame and pr-float animation. Only artwork fitting is specific. */
+.portfolio-grid .identity-media.savage .official-logo-img,.identity-case-stage.savage-oval .official-logo-img{mask-image:radial-gradient(ellipse 50% 50% at center,#000 62%,rgba(0,0,0,.85) 74%,transparent 100%);-webkit-mask-image:radial-gradient(ellipse 50% 50% at center,#000 62%,rgba(0,0,0,.85) 74%,transparent 100%);object-fit:contain}
+.portfolio-grid .identity-media.savage .official-logo-img{width:min(87%,340px);height:auto;max-height:82%}
+.identity-case-stage.savage-oval .official-logo-img{width:min(87%,400px);height:auto;max-height:none}
