@@ -43,7 +43,7 @@
 
 /* Decorative light stays inside home cards and never changes their geometry. */
 if(document.body.classList.contains('home-page')){
- document.querySelectorAll('main .motion-card,main .guide-links>a,main .trust-strip>span').forEach(card=>{
+ document.querySelectorAll('main .motion-card,main .guide-links>a').forEach(card=>{
   const light=document.createElement('span');light.className='home-aura-light';light.setAttribute('aria-hidden','true');card.append(light);
  });
 }
