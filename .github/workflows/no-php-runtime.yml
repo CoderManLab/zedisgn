@@ -1,0 +1,33 @@
+name: No PHP runtime guard
+on:
+  pull_request:
+  push:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  reject-php-runtime:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Reject PHP runtime and Composer manifests
+        shell: python
+        run: |
+          import pathlib
+          import subprocess
+          import sys
+          files = subprocess.check_output(["git", "ls-files", "-z"]).decode().split("\0")
+          forbidden = []
+          for name in filter(None, files):
+              p = pathlib.PurePosixPath(name)
+              if p.suffix.lower() in {".php", ".phtml", ".phar"} or p.name in {"composer.json", "composer.lock", ".php-version"}:
+                  forbidden.append(name)
+              if p.name.lower() in {"dockerfile", "dockerfile.prod", "dockerfile.production"}:
+                  body = pathlib.Path(name).read_text(encoding="utf-8", errors="replace")
+                  import re
+                  if re.search(r"(?im)^\\s*FROM\\s+\\S*php(?::|@|\\s|$)", body):
+                      forbidden.append(name + " (PHP Docker base image)")
+          if forbidden:
+              print("PHP runtime detected. Security review required:", *forbidden, sep="\n- ")
+              sys.exit(1)
+          print("No PHP code, Composer manifest, or PHP Docker base image detected in tracked files.")
