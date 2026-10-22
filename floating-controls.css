@@ -45,3 +45,19 @@ html body .wa-float{
  html body.v3-actions-open .chat-float,html body.v3-actions-open .back-float,html body.v3-actions-open .wa-float{right:14px!important;left:auto!important}
  html body.v3-actions-open .v3-floating-toggle{bottom:calc(196px + env(safe-area-inset-bottom,0px) + var(--zed-floating-clearance,0px))!important}
 }
+
+/* V3.9.3: three always-visible floating actions in exact requested order. */
+html body .v3-floating-toggle{display:none!important}
+html body.v3-actions-closed .chat-float,html body.v3-actions-closed .wa-float,html body.v3-actions-closed .back-float,
+html body.v3-actions-open .chat-float,html body.v3-actions-open .wa-float,html body.v3-actions-open .back-float{
+ visibility:visible!important;pointer-events:auto!important;
+}
+html body .back-float,html body .wa-float,html body .chat-float{
+ position:fixed!important;left:auto!important;right:calc(14px + env(safe-area-inset-right,0px))!important;
+ width:48px!important;height:48px!important;min-width:48px!important;min-height:48px!important;
+ top:auto!important;transform:none!important;translate:none!important;animation:none!important;
+}
+html body .back-float{bottom:calc(140px + env(safe-area-inset-bottom,0px) + var(--zed-floating-clearance,0px))!important}
+html body .wa-float{bottom:calc(78px + env(safe-area-inset-bottom,0px) + var(--zed-floating-clearance,0px))!important}
+html body .chat-float{bottom:calc(16px + env(safe-area-inset-bottom,0px) + var(--zed-floating-clearance,0px))!important}
+html body .float-stack{display:contents!important}
