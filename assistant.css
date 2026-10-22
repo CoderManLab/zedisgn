@@ -18,21 +18,15 @@
 .chat-panel .assistant-compose{flex:0 0 auto}
 @media(max-width:400px){.chat-body{padding:12px!important}.chat-quick-links a{font-size:13px}.chat-panel{max-width:calc(100vw - 20px)}}
 
-/* V3.6 — véritable contraste, halo externe et animation de fermeture */
-.chat-panel{position:fixed!important;isolation:isolate;overflow:visible!important;background:rgba(7,18,36,.88)!important;backdrop-filter:blur(20px) saturate(140%);-webkit-backdrop-filter:blur(20px) saturate(140%);border:1px solid #66c9ffb0!important;border-radius:22px!important;box-shadow:0 26px 65px #000a,0 0 34px #38b5ff69,0 0 2px 1px #8edcffb0!important}
-.chat-panel:before{content:"";position:absolute;z-index:-1;pointer-events:none;inset:-4px;border-radius:26px;background:conic-gradient(from 0deg,transparent 0deg,#31c8ff 75deg,transparent 135deg,#ac7eff 230deg,transparent 300deg);opacity:.9;filter:blur(9px);animation:zed-aura-spin 5s linear infinite}
-.chat-panel:after{content:"";position:absolute;inset:0;border-radius:22px;background:rgba(5,17,32,.94);z-index:-1;pointer-events:none}
-@keyframes zed-aura-spin{to{transform:rotate(360deg)}}
-.chat-panel .chat-head{background:rgba(15,39,65,.92)!important;border-radius:21px 21px 0 0}
-.chat-panel .chat-body{background:rgba(6,22,40,.35)!important}
-.chat-panel .assistant-actions,.chat-panel .assistant-compose{background:rgba(9,27,48,.84)!important}
-.chat-panel.is-closing{pointer-events:none;transform-origin:90% 95%;animation:zed-chat-close .7s cubic-bezier(.23,.9,.25,1) forwards!important}
-@keyframes zed-chat-close{0%{opacity:1;transform:scale(1) translate(0,0);filter:blur(0)}25%{opacity:1;transform:scale(1.025) rotate(-1deg);filter:drop-shadow(0 0 30px #40caff)}100%{opacity:0;transform:scale(.12) translate(90px,80px) rotate(12deg);filter:blur(12px)}}
-@media(prefers-reduced-motion:reduce){.chat-panel:before,.chat-panel.is-closing{animation:none!important}}
-
-/* V3.8: contained luminous perimeter, no external rotating spotlights. */
-.chat-panel{box-shadow:0 20px 52px rgba(0,0,0,.38),0 0 0 1px rgba(72,166,227,.22)!important;overflow:hidden!important;border:1px solid rgba(95,192,245,.52)!important;isolation:isolate}
-.chat-panel::before{z-index:3!important;inset:0!important;border-radius:inherit!important;opacity:.75!important;filter:none!important;background:none!important;border:2px solid transparent!important;box-shadow:inset 0 0 0 1px rgba(115,214,255,.3),inset 0 0 18px rgba(36,142,237,.09)!important;animation:zed-contained-border 4s ease-in-out infinite!important}
-.chat-panel::after{z-index:-1!important}
-@keyframes zed-contained-border{0%,100%{border-color:rgba(54,165,221,.25);box-shadow:inset 0 0 0 1px rgba(100,185,230,.16)}50%{border-color:rgba(124,226,255,.85);box-shadow:inset 0 0 0 1px rgba(133,221,255,.5),inset 0 0 15px rgba(46,155,236,.12)}}
-@media(prefers-reduced-motion:reduce){.chat-panel::before{animation:none!important}}
+/* V3.8 — translucent panel with light confined to its one-pixel perimeter. */
+.chat-panel{position:fixed!important;isolation:isolate;overflow:hidden!important;background:rgba(7,18,36,.88)!important;backdrop-filter:blur(20px) saturate(140%);-webkit-backdrop-filter:blur(20px) saturate(140%);border:1px solid rgba(95,192,245,.52)!important;border-radius:22px!important;box-shadow:0 20px 52px rgba(0,0,0,.38)!important}
+.chat-panel::before{content:"";position:absolute;z-index:3;pointer-events:none;inset:0;box-sizing:border-box;border-radius:inherit;border:1px solid rgba(115,214,255,.3);animation:zed-contained-border 4s ease-in-out infinite}
+.chat-panel::after{content:none}
+.chat-panel .chat-head{background:rgba(15,39,65,.78)!important;border-radius:21px 21px 0 0}
+.chat-panel .chat-body{background:rgba(6,22,40,.15)!important}
+.chat-panel .assistant-actions,.chat-panel .assistant-compose{background:rgba(9,27,48,.65)!important}
+@keyframes zed-contained-border{0%,100%{border-color:rgba(54,165,221,.25)}50%{border-color:rgba(124,226,255,.8)}}
+.chat-panel.is-closing{pointer-events:none;transform-origin:90% 100%;animation:zed-chat-close .28s ease-in forwards!important}
+@keyframes zed-chat-close{from{opacity:1;transform:translateY(0) scale(1)}to{opacity:0;transform:translateY(12px) scale(.96)}}
+@media(prefers-reduced-motion:reduce){.chat-panel::before,.chat-panel.is-closing{animation:none!important}}
+html[data-motion="reduced"] .chat-panel::before{animation:none!important}

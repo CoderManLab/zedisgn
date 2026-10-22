@@ -1,7 +1,13 @@
 name: ZEDESIGN V3 smoke tests
 on:
+  push:
+    branches: [main, fix/zedesign-v38-savage-chat-frame]
   pull_request:
     paths:
+      - "assistant.*"
+      - "identity-system.css"
+      - "*.html"
+      - ".github/workflows/zedesign-v3-qa.yml"
       - "theme-optimized.html"
       - "theme-mono-produit.html"
       - "realisations.html"
@@ -20,5 +26,6 @@ jobs:
         run: python3 scripts/check_v3_catalog.py
       - name: Check JavaScript syntax
         run: |
+          node --check assistant.js
           node --check catalog-v3.js
           node --check floating-controls.js
