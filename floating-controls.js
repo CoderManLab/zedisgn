@@ -11,6 +11,8 @@ toggle.setAttribute('aria-label','Ouvrir les actions rapides');
 toggle.setAttribute('aria-expanded','false');
 toggle.innerHTML='<span aria-hidden="true">⋯</span><span class="v3-toggle-label">Actions</span>';
 body.append(toggle);
+// All three controls stay visible; the obsolete mobile toggle is disabled.
+toggle.hidden=true;
 let open=false;
 const shown=n=>n&&!n.hidden&&getComputedStyle(n).display!=='none'&&n.getBoundingClientRect().height>0;
 function layout(){
@@ -18,12 +20,12 @@ function layout(){
  toggle.hidden=!mobile;
  body.classList.toggle('v3-floating-mobile',mobile);
  if(!mobile)open=false;
- body.classList.toggle('v3-actions-open',mobile&&open);
- body.classList.toggle('v3-actions-closed',mobile&&!open);
+ body.classList.remove('v3-actions-open');
+ body.classList.remove('v3-actions-closed');
  toggle.setAttribute('aria-expanded',String(mobile&&open));
  toggle.setAttribute('aria-label',open?'Fermer les actions rapides':'Ouvrir les actions rapides');
  toggle.querySelector('.v3-toggle-label').textContent=open?'Fermer':'Actions';
- controls.forEach(n=>n.inert=mobile&&!open);
+ controls.forEach(n=>n.inert=false);
  // Recalculate only when an overlay changes, never on page scroll.
  const overlay=[dock,consent].filter(shown).map(n=>Math.max(0,innerHeight-n.getBoundingClientRect().top));
  const clearance=Math.min(innerHeight*.45,Math.max(0,...overlay));
