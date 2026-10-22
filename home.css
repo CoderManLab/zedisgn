@@ -643,3 +643,7 @@ body{padding-top:78px}
 @keyframes trustIconPulse{0%,100%{filter:drop-shadow(0 0 3px #62dcff88)}50%{filter:drop-shadow(0 0 9px #62dcffdd)}}
 @media(max-width:660px){.trust-motion>span{padding-bottom:2.5rem}.trust-motion>span>.trust-icon{bottom:10px;width:24px;height:24px}}
 @media(prefers-reduced-motion:reduce){.trust-motion>span>.trust-icon{transition:none!important;animation:none!important}}
+
+/* Keep sections readable immediately; animate individual cards just before entry.
+   Nested section/card reveals previously accumulated blur and entrance delays. */
+html body .reveal{opacity:1;transform:none;filter:none;transition:none}
