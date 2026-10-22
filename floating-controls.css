@@ -15,3 +15,33 @@ body.v3-actions-open .chat-float,body.v3-actions-open .wa-float,body.v3-actions-
 html body .v3-floating-toggle{background:rgba(8,20,34,.48)!important;border:1px solid rgba(170,217,255,.25)!important;color:#f1fbff!important;backdrop-filter:blur(12px)!important;-webkit-backdrop-filter:blur(12px)!important;box-shadow:0 8px 26px rgba(0,0,0,.22)!important}
 html body .v3-floating-toggle:hover,html body .v3-floating-toggle:focus-visible{background:rgba(12,38,58,.72)!important;border-color:rgba(122,207,250,.68)!important}
 html body .v3-floating-toggle:focus-visible{outline:3px solid #90e2ff;outline-offset:3px}
+
+/* V3.9.2: stable viewport anchors, independent of scroll calculations. */
+html body .v3-floating-toggle{
+ top:auto!important;left:auto!important;right:calc(14px + env(safe-area-inset-right,0px))!important;
+ bottom:calc(16px + env(safe-area-inset-bottom,0px) + var(--zed-floating-clearance,0px))!important;
+ transform:none!important;animation:none!important;
+}
+html body.v3-actions-open .v3-floating-toggle{right:calc(14px + env(safe-area-inset-right,0px))!important}
+html body .chat-float,html body .back-float,html body .wa-float{
+ top:auto!important;transform:none!important;animation:none!important;
+}
+html body .chat-float{
+ left:14px!important;right:auto!important;
+ bottom:calc(16px + env(safe-area-inset-bottom,0px) + var(--zed-floating-clearance,0px))!important;
+}
+html body .back-float{
+ left:auto!important;right:14px!important;
+ bottom:calc(16px + env(safe-area-inset-bottom,0px) + var(--zed-floating-clearance,0px))!important;
+}
+html body .wa-float{
+ left:auto!important;right:14px!important;
+ bottom:calc(74px + env(safe-area-inset-bottom,0px) + var(--zed-floating-clearance,0px))!important;
+}
+@media(max-width:700px){
+ html body.v3-actions-open .chat-float{bottom:calc(16px + env(safe-area-inset-bottom,0px) + var(--zed-floating-clearance,0px))!important}
+ html body.v3-actions-open .back-float{bottom:calc(76px + env(safe-area-inset-bottom,0px) + var(--zed-floating-clearance,0px))!important}
+ html body.v3-actions-open .wa-float{bottom:calc(136px + env(safe-area-inset-bottom,0px) + var(--zed-floating-clearance,0px))!important}
+ html body.v3-actions-open .chat-float,html body.v3-actions-open .back-float,html body.v3-actions-open .wa-float{right:14px!important;left:auto!important}
+ html body.v3-actions-open .v3-floating-toggle{bottom:calc(196px + env(safe-area-inset-bottom,0px) + var(--zed-floating-clearance,0px))!important}
+}
