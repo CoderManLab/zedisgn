@@ -25,7 +25,7 @@ jobs:
               if p.name.lower() in {"dockerfile", "dockerfile.prod", "dockerfile.production"}:
                   body = pathlib.Path(name).read_text(encoding="utf-8", errors="replace")
                   import re
-                  if re.search(r"(?im)^\\s*FROM\\s+\\S*php(?::|@|\\s|$)", body):
+                  if re.search(r"(?im)^\s*FROM\s+\S*php(?::|@|\s|$)", body):
                       forbidden.append(name + " (PHP Docker base image)")
           if forbidden:
               print("PHP runtime detected. Security review required:", *forbidden, sep="\n- ")
