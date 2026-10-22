@@ -30,3 +30,37 @@
  .iphone-action-button{top:57px;height:12px}.iphone-volume-up{top:83px;height:24px}.iphone-volume-down{top:116px;height:24px}.iphone-power-button{top:92px;height:39px}
 }
 @media(max-width:360px){.studio-scene .phone.iphone-pro{width:172px;height:359px;right:0}.iphone-display{padding-top:35px;gap:4px}.studio-scene .iphone-pro .phone-logo{width:40px;height:40px}.iphone-pro .scene-phone-card{padding:8px}.iphone-pro .scene-phone-card strong{font-size:15px}.iphone-pro .scene-phone-tiles>div{padding:5px 3px}}
+
+/* V3.9.1: stable mobile floating controls and restrained aura */
+html{overflow-x:clip}
+body{overflow-x:clip}
+html body .chat-float,html body .back-float,html body .float-stack{
+ position:fixed!important;transform:none!important;translate:none!important;
+ animation:none!important;will-change:auto!important;
+}
+html body .chat-float,html body .back-float{
+ bottom:calc(18px + env(safe-area-inset-bottom,0px))!important;
+}
+html body .float-stack{
+ bottom:calc(82px + env(safe-area-inset-bottom,0px))!important;
+}
+html body .chat-float{left:14px!important;right:auto!important}
+html body .back-float,html body .float-stack{right:14px!important;left:auto!important}
+html body .chat-float svg,html body .back-float svg,html body .wa-float svg{
+ animation:none!important;transform:none!important;
+}
+html body .card,html body .panel,html body .service-card,
+html body .project-card,html body .master-card,html body .project-selector,
+html body .contact-card,html body .case-shot{
+ box-shadow:0 0 0 1px rgba(91,210,255,.09),0 0 28px rgba(35,175,255,.085),0 16px 45px rgba(0,0,0,.16);
+ transition:box-shadow .28s ease,border-color .28s ease;
+}
+@media(hover:hover) and (pointer:fine){
+ html body .card:hover,html body .panel:hover,html body .service-card:hover,
+ html body .project-card:hover,html body .master-card:hover,html body .project-selector:hover{
+ box-shadow:0 0 0 1px rgba(91,210,255,.26),0 0 38px rgba(35,175,255,.18),0 18px 50px rgba(0,0,0,.2);
+ }
+}
+@media(prefers-reduced-motion:reduce){
+ html body .card,html body .panel,html body .service-card,html body .project-card,html body .master-card{transition:none!important}
+}
