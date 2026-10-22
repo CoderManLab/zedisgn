@@ -4,9 +4,9 @@ import json
 from pathlib import Path
 root=Path(__file__).resolve().parents[1]
 records=json.loads((root/'data/module-status.json').read_text())['records']
-assert len(records)>=50 and len({r['id'] for r in records})==len(records)
+assert len(records)>=30 and len({r['id'] for r in records})==len(records)
 assert all(r['status']=='non_audite' and r['technical_validation'] is False for r in records)
-for name in ('theme-optimized.html','theme-mono-produit.html'):
+for name in ('theme-optimized.html',):
     txt=(root/name).read_text()
     for fragment in ('id="catalogue-v3"','data-v3-expand','data-v3-collapse','data-v3-share','catalog-v3.css','catalog-v3.js','<details class="v3-module"'):
         assert fragment in txt,(name,fragment)
@@ -14,13 +14,13 @@ for name in ('theme-optimized.html','theme-mono-produit.html'):
     assert txt.count('<details')==txt.count('</details>'),name
     assert txt.count('<main')==txt.count('</main>')==1
     assert '47 €' in txt
-for page in ('index.html','service-shopify.html','theme-pack.html'):
+for page in ('index.html','service-shopify.html'):
     content=(root/page).read_text()
-    assert content.count('v3-commercial-snapshot')==2,(page,'commercial previews')
-assert 'data-v3-share' in (root/'theme-pack.html').read_text()
+    assert content.count('v3-commercial-snapshot')==1,(page,'commercial previews')
+assert 'data-v3-share' in (root/'theme-optimized.html').read_text()
 assert 'assets/crft-v36.webp' in (root/'realisations.html').read_text()
 assert (root/'assets/crft-logo-official.png').is_file()
-for page in ('theme-optimized.html','theme-mono-produit.html'):
+for page in ('theme-optimized.html',):
     s=(root/page).read_text()
     assert 'id="correctifs-shopify"' in s
     assert 'V2.15.3 ne sera annoncée' in s
@@ -53,3 +53,16 @@ for slug in ('savage-horizon','syrnax','crft'):
 assert 'zed-aura-spin' not in (root/'assistant.css').read_text()
 assert 'zed-chat-close' in (root/'assistant.js').read_text()
 print('V3.6 identities and assistant animations validated')
+
+# One commercial theme; all existing Optimized module IDs remain available.
+for page in root.glob('*.html'):
+    text=page.read_text()
+    assert 'Optimized Mono Produit' not in text,page.name
+    assert '77 €' not in text,page.name
+    assert 'href="theme-mono-produit.html' not in text,page.name
+    assert 'href="theme-pack.html' not in text,page.name
+for page in ('theme-mono-produit.html','theme-pack.html'):
+    assert '0;url=theme-optimized.html' in (root/page).read_text()
+assert 'configuration catalogue ou mono-produit' in (root/'theme-optimized.html').read_text()
+assert all(row['theme']=='Optimized' for row in records)
+print('Single Optimized theme checks passed')
