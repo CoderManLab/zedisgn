@@ -37,14 +37,14 @@ html[data-motion="reduced"] .theme-sales .popular-offer::after{animation:none}
 html[data-motion=reduced] .optimized-metal-logo::after{animation:none;display:none}
 
 /* Readable complete artwork without resampling through the old silhouette. */
-.optimized-metal-logo::after{display:none}
+/* Do not suppress metallic overlay. */
 .sales-hero .sales-brand .optimized-metal-logo,
 .sales-catalog-hero .duo-identity .optimized-metal-logo,
 .sales-product-card .optimized-metal-logo.theme-mini-logo{
- width:180px!important;height:auto!important;aspect-ratio:1290/1085;max-width:100%;filter:none;transform:none!important
+ width:180px!important;height:auto!important;aspect-ratio:1290/1085;max-width:100%;filter:none
 }
 .sales-hero .visual-label .optimized-metal-logo{
- width:110px!important;height:auto!important;aspect-ratio:1290/1085;max-width:40%;filter:none;transform:none!important
+ width:110px!important;height:auto!important;aspect-ratio:1290/1085;max-width:40%;filter:none
 }
 .optimized-metal-logo img{image-rendering:auto;transform:none;animation:none}
 @media(max-width:600px){
@@ -52,3 +52,51 @@ html[data-motion=reduced] .optimized-metal-logo::after{animation:none;display:no
  .sales-catalog-hero .duo-identity .optimized-metal-logo,
  .sales-product-card .optimized-metal-logo.theme-mini-logo{width:180px!important}
 }
+
+
+/* Optimized logo: use the complete alpha WebP in its actual landscape aspect. */
+.sales-hero .sales-brand .optimized-metal-logo,
+.sales-catalog-hero .duo-identity .optimized-metal-logo{
+  min-width:0;overflow:hidden;aspect-ratio:1290 / 1085;
+  transform-origin:center;
+  animation:optimized-logo-float 7s ease-in-out infinite;
+  filter:drop-shadow(0 6px 13px rgba(32,207,164,.15));
+}
+.sales-hero .sales-brand .optimized-metal-logo img,
+.sales-catalog-hero .duo-identity .optimized-metal-logo img{
+  display:block;width:100%!important;height:100%!important;object-fit:contain;
+}
+/* Reflected light is clipped to the logo's alpha, not an opaque rectangle. */
+.optimized-metal-logo::after{
+  display:block;transform:none;z-index:2;mix-blend-mode:screen;
+  background:linear-gradient(108deg,transparent 35%,rgba(255,255,255,.1) 43%,rgba(255,255,255,.56) 49%,rgba(255,255,255,.1) 55%,transparent 63%);
+  background-size:260% 100%;background-position:155% 0;
+  -webkit-mask-image:url("assets/optimized-transparent-v2.webp");
+  mask-image:url("assets/optimized-transparent-v2.webp");
+  -webkit-mask-size:100% 100%;mask-size:100% 100%;
+  -webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;
+  animation:optimized-logo-glint 7s ease-in-out infinite;
+}
+@keyframes optimized-logo-glint{0%,25%{background-position:155% 0}63%,100%{background-position:-155% 0}}
+@keyframes optimized-logo-float{0%,100%{transform:translate3d(0,0,0)}50%{transform:translate3d(0,-5px,0)}}
+@keyframes optimized-logo-reveal{from{opacity:.72;transform:translateY(12px)}to{opacity:1;transform:none}}
+.sales-hero h1,.sales-catalog-hero h1{animation:optimized-logo-reveal .8s ease-out both}
+@media(max-width:600px){
+  .sales-hero .sales-brand{justify-content:center}
+  .sales-hero .sales-brand .optimized-metal-logo,
+  .sales-catalog-hero .duo-identity .optimized-metal-logo{
+    width:min(210px,65vw)!important;height:auto!important;aspect-ratio:1290 / 1085;
+  }
+  .sales-catalog-hero .duo-identity{margin-bottom:18px}
+}
+@media(prefers-reduced-motion:reduce){
+  .optimized-metal-logo::after{display:none;animation:none}
+  .sales-hero .sales-brand .optimized-metal-logo,
+  .sales-catalog-hero .duo-identity .optimized-metal-logo,
+  .sales-hero h1,.sales-catalog-hero h1{animation:none}
+}
+html[data-motion=reduced] .optimized-metal-logo::after{display:none;animation:none}
+html[data-motion=reduced] .sales-hero .sales-brand .optimized-metal-logo,
+html[data-motion=reduced] .sales-catalog-hero .duo-identity .optimized-metal-logo,
+html[data-motion=reduced] .sales-hero h1,
+html[data-motion=reduced] .sales-catalog-hero h1{animation:none}
