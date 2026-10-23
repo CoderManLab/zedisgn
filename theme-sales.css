@@ -121,3 +121,112 @@ html[data-motion=reduced] .sales-hero h1,
 html[data-motion=reduced] .sales-catalog-hero h1{
   animation:none!important;
 }
+
+
+/* OPTIMIZED V405 — ambient metallic identity.
+   Keep the original complete 800×672 transparent image at its natural ratio.
+   Effects are CSS backgrounds/shadows only, never duplicated text or image masks. */
+.sales-hero .sales-brand .optimized-metal-logo,
+.sales-catalog-hero .duo-identity .optimized-metal-logo,
+.sales-product-card .optimized-metal-logo.theme-mini-logo{
+  position:relative;
+  box-sizing:border-box;
+  padding:14px;
+  border:1px solid rgba(119,211,228,.25);
+  border-radius:26px;
+  background:
+    radial-gradient(ellipse at 45% 40%,rgba(37,213,173,.21),rgba(38,131,178,.12) 43%,transparent 76%),
+    linear-gradient(145deg,rgba(17,38,56,.82),rgba(7,18,33,.44));
+  box-shadow:inset 0 1px 0 rgba(206,239,255,.15),
+             0 12px 29px rgba(0,0,0,.18),
+             0 0 26px rgba(45,199,203,.11);
+  background-repeat:no-repeat;
+  background-position:50% 50%;
+  overflow:visible!important;
+  will-change:auto;
+  animation:optimized-clean-float 6.5s ease-in-out infinite,
+            optimized-brand-halo 5s ease-in-out infinite;
+}
+@keyframes optimized-brand-halo{
+  0%,100%{
+    border-color:rgba(119,211,228,.25);
+    box-shadow:inset 0 1px 0 rgba(206,239,255,.15),
+               0 12px 29px rgba(0,0,0,.18),
+               0 0 26px rgba(45,199,203,.11);
+  }
+  50%{
+    border-color:rgba(129,236,220,.43);
+    box-shadow:inset 0 1px 0 rgba(215,247,255,.25),
+               0 14px 33px rgba(0,0,0,.23),
+               0 0 43px rgba(35,228,194,.21);
+  }
+}
+/* The screenshot's preview callout now carries only one centred logo. */
+.sales-hero .visual-label.visual-label--logo-only{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:0;
+  min-width:0;
+  min-height:132px;
+  padding:12px 16px;
+  z-index:2;
+  overflow:visible;
+  border-color:rgba(100,220,233,.42);
+  background:radial-gradient(ellipse at 50% 44%,rgba(38,145,171,.2),transparent 74%),
+             linear-gradient(145deg,#0c2335,#07192a);
+  animation:optimized-preview-panel-glow 5s ease-in-out infinite;
+}
+.sales-hero .visual-label.visual-label--logo-only .optimized-metal-logo{
+  display:block;
+  width:clamp(118px,33vw,148px)!important;
+  max-width:calc(100% - 20px)!important;
+  height:auto!important;
+  aspect-ratio:auto!important;
+  padding:4px;
+  margin-inline:auto;
+  border:0;
+  border-radius:18px;
+  background:radial-gradient(ellipse at center,rgba(45,211,184,.13),transparent 74%);
+  filter:drop-shadow(0 0 16px rgba(54,227,198,.2));
+  transform-origin:center center;
+  animation:optimized-clean-float 5.7s ease-in-out infinite;
+}
+.sales-hero .visual-label.visual-label--logo-only .optimized-metal-logo > img{
+  display:block;
+  width:100%!important;
+  height:auto!important;
+  object-fit:contain!important;
+}
+@keyframes optimized-preview-panel-glow{
+  0%,100%{border-color:rgba(100,220,233,.35);box-shadow:0 12px 30px rgba(0,0,0,.24),0 0 18px rgba(50,185,223,.08)}
+  50%{border-color:rgba(112,239,212,.61);box-shadow:0 12px 30px rgba(0,0,0,.24),0 0 32px rgba(51,216,202,.17)}
+}
+@media(max-width:600px){
+  .sales-hero .sales-brand .optimized-metal-logo,
+  .sales-catalog-hero .duo-identity .optimized-metal-logo,
+  .sales-product-card .optimized-metal-logo.theme-mini-logo{
+    width:min(200px,66vw)!important;
+    padding:12px;
+    border-radius:23px;
+  }
+  .sales-hero .visual-label.visual-label--logo-only{
+    left:12px;
+    right:12px;
+    min-height:128px;
+    padding:10px 14px;
+  }
+  .sales-hero .visual-label.visual-label--logo-only .optimized-metal-logo{
+    width:min(146px,44vw)!important;
+  }
+}
+@media(prefers-reduced-motion:reduce){
+  .sales-hero .visual-label.visual-label--logo-only,
+  .sales-hero .visual-label.visual-label--logo-only .optimized-metal-logo{
+    animation:none!important;
+  }
+}
+html[data-motion=reduced] .sales-hero .visual-label.visual-label--logo-only,
+html[data-motion=reduced] .sales-hero .visual-label.visual-label--logo-only .optimized-metal-logo{
+  animation:none!important;
+}
