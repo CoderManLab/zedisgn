@@ -230,3 +230,39 @@ html[data-motion=reduced] .sales-hero .visual-label.visual-label--logo-only,
 html[data-motion=reduced] .sales-hero .visual-label.visual-label--logo-only .optimized-metal-logo{
   animation:none!important;
 }
+
+
+/* Optimized V406: centred card branding; existing glow and motion untouched. */
+.sales-product-card--optimized .optimized-card-logo-link{
+  display:flex;
+  flex:none;
+  width:100%;
+  max-width:100%;
+  justify-content:center;
+  align-items:center;
+  align-self:stretch;
+  text-decoration:none;
+  border-radius:26px;
+}
+.sales-product-card--optimized .optimized-card-logo-link:focus-visible{
+  outline:2px solid #9cdefc;
+  outline-offset:5px;
+}
+.sales-product-card--optimized .optimized-metal-logo.theme-mini-logo{
+  display:block;
+  margin-inline:auto;
+  max-width:min(200px,66vw);
+}
+.sales-product-card--optimized > .sales-eyebrow{
+  display:block;
+  width:100%;
+  max-width:100%;
+  margin:8px 0 12px;
+  text-align:center;
+  align-self:center;
+  color:#c2dcfc;
+}
+@media(max-width:600px){
+  .sales-product-card--optimized .optimized-card-logo-link{width:100%}
+  .sales-product-card--optimized > .sales-eyebrow{margin:7px 0 10px}
+}
