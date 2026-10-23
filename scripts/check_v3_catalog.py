@@ -13,7 +13,7 @@ for name in ('theme-optimized.html',):
     assert txt.count('<details class="v3-module"') >= 25
     assert txt.count('<details')==txt.count('</details>'),name
     assert txt.count('<main')==txt.count('</main>')==1
-    assert '47 €' in txt
+    assert '147 €' in txt
 for page in ('index.html','service-shopify.html'):
     content=(root/page).read_text()
     assert content.count('v3-commercial-snapshot')==1,(page,'commercial previews')

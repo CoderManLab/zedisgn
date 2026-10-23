@@ -27,3 +27,11 @@ html[data-motion="reduced"] .theme-sales .popular-offer::after{animation:none}
 
 /* Single Optimized product: keep the remaining offer centred without an empty column. */
 .sales-two:has(>.sales-product-card:only-child){grid-template-columns:minmax(0,1fr);max-width:780px;margin-inline:auto}
+
+/* Optimized supplied artwork: metallic light sweep, scoped to its logo only. */
+.optimized-metal-logo{position:relative;display:inline-grid;flex:none;overflow:hidden;isolation:isolate;vertical-align:middle;background:#000;max-width:100%;aspect-ratio:1}
+.optimized-metal-logo img{display:block;width:100%!important;height:100%!important;object-fit:contain;filter:none!important}
+.optimized-metal-logo::after{content:"";position:absolute;inset:0;pointer-events:none;mix-blend-mode:soft-light;background:linear-gradient(110deg,transparent 36%,rgba(255,255,255,.35) 44%,#fff 49%,rgba(255,255,255,.4) 54%,transparent 63%);transform:translateX(-140%);animation:optimized-metal-reflection 6s ease-in-out infinite}
+@keyframes optimized-metal-reflection{0%,55%{transform:translateX(-140%)}90%,100%{transform:translateX(140%)}}
+@media(prefers-reduced-motion:reduce){.optimized-metal-logo::after{animation:none;display:none}}
+html[data-motion=reduced] .optimized-metal-logo::after{animation:none;display:none}
